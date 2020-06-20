@@ -9,4 +9,22 @@ Paginas referentes:
 5- https://beermarket.com.ar/
 6- https://www.puroescabio.com.ar/
 
-Equipo
+
+Equipo y reseña
+Carla Rocca
+-
+-
+-
+-
+
+Tomas Jais
+-
+-
+-
+-
+
+Juan Pablo Casa
+-
+-
+-
+-
