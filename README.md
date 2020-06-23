@@ -30,4 +30,4 @@ Juan Pablo Casa
 - Tengo 37 años, estoy casado y tengo dos hermosos hijos, Alma de 8 años y Valentin de 10.
 - Trabajo desde hace 18 años en el área de RRHH de diferentes empresas. Actualmente en Cencosud S.A. (Jumbo, Easy, etc.)
 - Apasionado del fútbol, fanático de Huracan.
--
+
