@@ -15,8 +15,8 @@ Paginas referentes:
 
 Equipo y reseña
 Carla Rocca
--
--
+-Tengo 21 años y soy estudiante de la carrera de Cs Biologicas en la UBA.
+-Ojalá trabajara pero por el momento solo leo, estudio y paseo con mi perra.
 -
 -
 
