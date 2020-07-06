@@ -23,8 +23,6 @@ Carla Rocca
  Tomas Jais
 - Tengo 18 años y deje la carrera por ahora, seguramente me anote en UTN el año que viene
 - me coparia laburar de esto para seguir aprendiendo y seguir descubriendo lo que me gusta
--
--
 
 Juan Pablo Casa
 - Tengo 37 años, estoy casado y tengo dos hermosos hijos, Alma de 8 años y Valentin de 10.
