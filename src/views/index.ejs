@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- Include Head -->
+<%- include('partials/head', {title: 'Inicio'}) %>
+<body>
+	<!-- Header -->
+	<%- include('partials/headerNavbar') %>
+	<!-- /Header -->
+	
+	<!-- Banner -->
+	<%- include('partials/banner') %>
+	<!-- /Banner -->
+	<br>
+	
+	<!-- Nuestros Productos -->
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<h2 class="productos-titulo">Nuestros productos</h2>
+			</div>
+		</div>
+			<!-- Mostrar productos -->
+		<div class="conteiner">
+			<div class="row">
+				<% for(let i=0; i< products.length; i++) { %>
+				<div class="col-12 col-md-6 col-xl-3">
+				<section class="productos">
+					<a href="/products/detail/¿?">
+						<figure class="">
+							<img src="/images/default-image.png" alt="<%= products[i].name %>">
+						</figure>
+						<article class="">
+							<h3><%= products[i].name %></h3>
+							<h4>$ <%= products[i].price %></h4>
+							<span><%= products[i].discount %> % OFF</span>
+							
+						</article>
+					</a>
+					<br>
+					<button type="button" class="btn btn-primary btn-lg btn-block">COMPRAR</button>
+				</section>
+				</div>
+				<% } %>
+
+			</div>
+		</div>
+	</div>
+	<!-- /ultima visita -->
+
+	
+
+	<!-- footer -->
+	<%- include('partials/footer') %>
+	<!-- /footer -->
+</body>	
+</html>
