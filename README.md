@@ -20,9 +20,9 @@ Carla Rocca
 - Ojalá trabajara pero por el momento solo leo, estudio y paseo con mi perra.
 
 
-Tomas Jais
--Tengo 18 años y deje la carrera por ahora, seguramente me anote en UTN el año que viene
--me coparia laburar de esto para seguir aprendiendo y seguir descubriendo lo que me gusta
+ Tomas Jais
+- Tengo 18 años y deje la carrera por ahora, seguramente me anote en UTN el año que viene
+- me coparia laburar de esto para seguir aprendiendo y seguir descubriendo lo que me gusta
 -
 -
 
