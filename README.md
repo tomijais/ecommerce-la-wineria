@@ -1,10 +1,8 @@
-# grupo_5_bebidas
+# La Wineria
+  La Wineria es el lugar para encontrar las mejores bebidas par acompañar tus momentos únicos. Posee una selección de vinos, whiskies y espumantes. El target de clientes que manejamos está especificamente enfocado en personas con conocimiento en la materia, tales como los catadores profesionales, y los clásicos amateurs que siempre piensan en la calidad de sus bebidas.
 
-Nombre: La Wineria
-Descripción breve: La Wineria es el lugar para encontrar las mejores bebidas par acompañar tus momentos únicos. Posee una selección de vinos, whiskys, y las mejores cervezas importadas. Esta dirigido al público que disfruta del buen beber!!!
+## Paginas referentes:
 
-
-Paginas referentes:
 1- https://vinotecaligier.com/
 2- https://frappe.com.ar/
 3- http://www.vinotecaargentina.com/
@@ -12,13 +10,14 @@ Paginas referentes:
 5- https://beermarket.com.ar/
 6- https://www.puroescabio.com.ar/
 
+## Link al tablero de organización:
 
-Equipo y reseña
+https://trello.com/b/2OMgjlob/la-wineria
+
+## Equipo y reseña
 
 Carla Rocca
-- Tengo 21 años y soy estudiante de la carrera de Cs Biologicas en la UBA.
-- Ojalá trabajara pero por el momento solo leo, estudio y paseo con mi perra.
-
+- Tengo 21 años y soy estudiante de la carrera de Cs. Biologicas en la UBA.
 
  Tomas Jais
 - Tengo 18 años y deje la carrera por ahora, seguramente me anote en UTN el año que viene
