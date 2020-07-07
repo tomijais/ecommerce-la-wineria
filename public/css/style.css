@@ -1,0 +1,12 @@
+/*====== Home ======*/
+@import 'partials/_home.css';
+
+
+/*====== Fonts ======*/
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
+
+/*====== Variables ======*/
+@import 'partials/_variables.css';
