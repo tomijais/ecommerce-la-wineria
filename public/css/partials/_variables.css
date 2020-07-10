@@ -1,12 +1,12 @@
 :root {
   --yellow: #EAC926;
+  --white: #ffffff;
   --dark-blue: #03264C;
-  --light-blue: #1259c3;
-  --gray: #666666;
+  --light-blue: #84d2f1;
   --light-gray: #ebebeb;
   --green: #39b54a;
-  --base-font-family:'Lato', 'Roboto', sans-serif;
+  --base-font-family:'Monstserrat', 'Roboto', Helvetica, sans-serif;
   --compensados1: #FC6E44;
-  --compensados2: #44D2FC;
+  --compensados2: #8c1b64; /*#44D2FC; anterior*/
   --triada3: #44FC79;
 }

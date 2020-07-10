@@ -1,5 +1,3 @@
-
-
 /*====== Basics ======*/
 * {
   box-sizing: border-box;
@@ -8,11 +6,9 @@
 body {
   min-height: 100vh;
   margin: 0;
-  font-size: 10px;
+  padding: 0;
   font-family: var(--base-font-family);
-  font-weight: 300;
-  background-color: var(--light-gray);
-  
+  background-color: var(--light-gray);  
 }
 
 ul,
@@ -20,7 +16,7 @@ li {
   list-style: none;
   margin: 0;
   padding: 10px;
-  font-family: 'Lato', 'Robot', Arial, Helvetica, sans-serif;
+  font-family: var(--base-font-family);
   font-weight: bold;
 }
 
@@ -29,6 +25,7 @@ ul li a {
   text-decoration: none;
   color: inherit;
 }
+
 a {
   text-decoration: none;
   color: inherit;
@@ -42,62 +39,9 @@ img.logo {
   width: 60%;
 }
 
-/*====== Header ======*/
-.header {
-  display: block;
-  text-align: center;
-  padding: 15px 0;
-  background-color: var(--compensados2);
-  width: 100%;
-  left: 0;
-  top: 0;
-  width: 100%;
-  position: relative;
-  
-}
-.main-banner {
-  display: none;
-}
-
-.fixed-top {
-  position: relative;
-  z-index: 100;
-}
-
-
-/*====== Main Navbar ======*/
-.btn-toggle-navbar {
-  background-color: var(--dark-blue);
-  color: #ffffff;
-  font-size: 1.5em;
-  border: none;
-  border-radius: 4px;
-  padding: 5px 15px;
-  display: block;
-  margin: 20px auto 0;
-}
-
-.navegador {
-  margin-top: 20px;
-  display: none;
-}
-
-.navegador-central {
-  font-size: 20px;
-}
-.navegador-derecha {
-  font-size: 20px;
-}
-
-.navegador-central a {
-  display: block;
-  padding: 5px 0;
-  border-bottom: solid 1px var(--gray);
-}
 .navegador-derecha a {
   display: block;
   padding: 5px 0;
-  border-bottom: solid 1px var(--gray);
 }
 
 .productos-titulo {
@@ -112,13 +56,15 @@ img.logo {
 
 article h3 {
   text-align: center;
-  font-family: 'Lato', 'Roboto', Arial, Helvetica, sans-serif;
+  font-family: var(--base-font-family);
 }
+
 article h4 {
   display: flex;
   justify-content: center;
   text-align: center;
 }
+
 article span {
   display: flex;
   justify-content: center;
@@ -127,216 +73,5 @@ article span {
 }
 
 .btn {
-  font-family: 'Lato';
-  
-}
-
-/*====== Media-Queries ======*/
-@media (min-width: 1100px) {
-  .header {
-    display: flex;
-    justify-content: space-around;
-    padding: 0 0;
-    height: 100px;
-    overflow: hidden;
-    position: fixed;
-    box-sizing: border-box;
-    box-shadow: 0px 15px 21px -5px rgba(5,130,130,0.4);
-  }
-  img.logo {
-    width: 50%;
-  }
-  
-  .banner {
-    padding-top: 110px;
-    height: 350px;
-  }
-  .main-banner {
-    display: block;
-  }
-  
-  
-  .fixed-top {
-  position: fixed;
-}
-
-.iconos {
-  margin-top: 30px;
-  margin-bottom: 30px;
-  font-size: 40px;
-}
-div.iconos div div div h3 {
-  font-size: 20px;
-}
-div.iconos div div {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-  .btn-toggle-navbar {
-    display: none;
-  }
-  
-  ul li {
-    margin: 0;
-    padding: 0px;
-  }
-  .navegador {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    font-size: 20px;
-  }
-  .navegador-central {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    font-size: 20px;
-  }
-  .navegador-derecha {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    font-size: 20px;
-  }
-  
-  
-  .navegador-central a {
-    border-bottom: none;
-  }
-  .navegador-derecha a {
-    border-bottom: none;
-  }
-  
-  .navegador-central a:hover {
-    color: var(--light-blue);
-  }
-  .navegador-derecha a:hover {
-    color: var(--light-blue);
-  }
-  
-  .navegador-central li {
-    margin-right: 40px;
-  }
-  
-  .navegador-derecha li {
-    margin-left: 15px;
-    font-size: 25px;
-  }
-  
-  .main-footer {
-    background-color: var(--compensados2);
-    font-family: var(--base-font-family);
-    font-size: 15px;
-    box-shadow: 0px 0px 15px -5px rgba(10,134,133,1);
-    margin-bottom: 0;
-    
-  }
-  footer.main-footer div {
-    padding-top: 10px;
-  }
-
-  article.footer-data {
-    align-items: center;
-    text-align: center;
-  }
-  article.footer-data h2 {
-    font-size: 22px;
-  }
-  article.footer-data i {
-    font-size: 50px;
-    margin-left: 5px;
-    margin-right: 5px;
-  }
-  article.footer-data a {
-    display: block;
-    padding: 7px 0px;
-  }
-  
-}
-
-@media (min-width: 768px) and (max-width: 1099px) {
-  .header {
-    display: flex;
-    justify-content: space-around;
-    padding: 0px 0;
-  }
-  .main-banner {
-    display: block;
-  }
-  
-  
-  .fixed-top {
-    position: fixed;
-  }
-  .banner {
-    padding-top: 110px;
-    height: 350px;
-  }
-  
-  img.logo {
-    width: 40%;
-    
-  }
-  
-  .btn-toggle-navbar {
-    display: none;
-  }
-  
-  
-  .navegador {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    font-size: 20px;
-  }
-  .navegador-central {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    font-size: 15px;
-  }
-  .navegador-derecha {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    font-size: 15px;
-  }
-  
-  
-  .navegador-central a {
-    border-bottom: none;
-  }
-  .navegador-derecha a {
-    border-bottom: none;
-  }
-  
-  .navegador-central a:hover {
-    color: var(--light-blue);
-  }
-  .navegador-derecha a:hover {
-    color: var(--light-blue);
-  }
-  
-  .navegador-central li {
-    margin-right: 20px;
-  }
-  
-  ul li {
-    margin: -10;
-    padding: 0;
-  }
-  .navegador-derecha li {
-    margin-left: 10px;
-    font-size: 20px;
-  }
-  
-  
+  font-family: var(--base-font-family);  
 }
