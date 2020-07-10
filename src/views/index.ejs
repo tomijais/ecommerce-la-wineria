@@ -16,21 +16,21 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-12 col-md-4 col-xl-4">
-				<i class="far fa-credit-card"></i>
-				<h3>Compra en Cuotas</h3>
+					<i class="far fa-credit-card"></i>
+					<h3>Compra en Cuotas</h3>
 				</div>
 				<div class="col-12 col-md-4 col-xl-4">
-				<i class="fas fa-truck"></i>
-				<h3>Envíos a Domicilio</h3>
+					<i class="fas fa-truck"></i>
+					<h3>Envíos a Domicilio</h3>
 				</div>
 				<div class="col-12 col-md-4 col-xl-4">
-				<i class="far fa-clock"></i>
-				<h3>Tiempo de entrega estimado</h3>
+					<i class="far fa-clock"></i>
+					<h3>Tiempo de entrega estimado</h3>
 				</div>
 			</div>
 		</div>
-		</div>
-		
+	</div>
+	
 	<!-- Nuestros Productos -->
 	<div class="container">
 		<div class="row">
@@ -38,38 +38,34 @@
 				<h2 class="productos-titulo">Nuestros productos</h2>
 			</div>
 		</div>
-			<!-- Mostrar productos -->
-		<div class="conteiner">
+		<!-- Mostrar productos -->
+		<div class="container">
 			<div class="row">
 				<% for(let i=0; i< products.length; i++) { %>
-				<div class="col-12 col-md-6 col-xl-3">
-				<section class="productos">
-					<a href="/products/detail/¿?">
-						<figure class="">
-							<img src="/images/default-image.png" alt="<%= products[i].name %>">
-						</figure>
-						<article class="">
-							<h3><%= products[i].name %></h3>
-							<h4>$ <%= products[i].price %></h4>
-							<span><%= products[i].discount %> % OFF</span>
-							
-						</article>
-					</a>
-					<br>
-					<button type="button" class="btn btn-primary btn-lg btn-block">COMPRAR</button>
-				</section>
+					<div class="col-12 col-md-6 col-xl-3">
+						<section class="productos">
+							<a href="/products/detail/¿?">
+								<figure class="">
+									<img src="/images/default-image.png" alt="<%= products[i].name %>">
+								</figure>
+								<article class="">
+									<h3><%= products[i].name %></h3>
+									<h4>$ <%= products[i].price %></h4>
+									<span><%= products[i].discount %> % OFF</span>
+								</article>
+							</a>
+							<br>
+							<button type="button" class="btn btn-primary btn-lg btn-block">COMPRAR</button>
+						</section>
+					</div>
+					<% } %>
 				</div>
-				<% } %>
-
 			</div>
 		</div>
-	</div>
-	<!-- /ultima visita -->
+		<!-- /ultima visita -->	
 
-	
-
-	<!-- footer -->
-	<%- include('partials/footer') %>
-	<!-- /footer -->
-</body>	
-</html>
+		<!-- footer -->
+		<%- include('partials/footer') %>
+		<!-- /footer -->
+	</body>	
+	</html>
