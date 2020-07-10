@@ -54,8 +54,9 @@ img.logo {
   padding-bottom: 10px;
 }
 
-article h3 {
+.productos a{
   text-align: center;
+  text-decoration: none;
   font-family: var(--base-font-family);
 }
 
