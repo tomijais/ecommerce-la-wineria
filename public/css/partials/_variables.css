@@ -1,12 +1,13 @@
 :root {
   --yellow: #EAC926;
-  --white: #ffffff;
+  --white: #fcf7f7;
   --dark-blue: #03264C;
   --light-blue: #84d2f1;
   --light-gray: #ebebeb;
   --green: #39b54a;
-  --base-font-family:'Monstserrat', 'Roboto', Helvetica, sans-serif;
+  --base-font-family:'Alegreya Sans', Helvetica, sans-serif;
+  --cursiva: 'Cedarville Cursive', serif;
   --compensados1: #FC6E44;
-  --compensados2: #8c1b64; /*#44D2FC; anterior*/
+  --fondo-home: #8c1b64;
   --triada3: #44FC79;
 }
