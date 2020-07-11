@@ -1,0 +1,44 @@
+.form-group.required label:after {
+  content:"*";
+  color:red;
+}
+
+.info-usuario h1 {
+  font-family: var(--cursiva);    
+  text-align: center;
+}
+
+@media (min-width: 768px) and (max-width: 1099px) {
+  .info-usuario {
+    margin-top: 100px;
+    width: 100%;
+  }
+ 
+  .info-usuario form label{
+    margin-bottom: 0px;
+    margin-top: 5px;
+  }
+
+  .info-usuario form button {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+}
+
+@media (min-width: 1100px) {
+  .info-usuario {
+    margin-top: 150px;
+    width: 100%;
+  }
+  
+  .info-usuario form label{
+    font-size: 20px;
+    margin-bottom: 0px;
+    margin-top: 5px;
+  }
+
+  .info-usuario form button {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+}

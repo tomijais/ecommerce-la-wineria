@@ -1,19 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <!-- Include Head -->
-<%- include('partials/head', {title: 'Inicio'}) %>
+<%- include('partials/head', {title: 'La Wineria | Registrate'}) %>
 <body>
 	<!-- Header -->
 	<%- include('partials/headerNavbar') %>
 	<!-- /Header -->
+	<div class="container">	
+		<div class="row">
+			<div class="info-usuario">
+				<h1>Registrate</h1>				
+				<form action="" method="post" enctype="multipart/form-data">
+					<div class="form-group required">
+						<label for="nombreUsuario">Nombre</label>
+						<input type="text" name="nombreUsuario" class="form-control" id="nombreUsuario" required="required" width= "100vw">
 
-    <br><br><br><br><br><br><br><br>
-    <h2>Aca va el registro de usuarios</h2>
-	<br><br><br><br><br><br><br><br><br><br>
-    <br><br><br><br><br><br><br><br><br><br>
-    <br><br><br><br><br><br><br><br><br><br>
-	<!-- footer -->
-	<%- include('partials/footer') %>
-	<!-- /footer -->
+						<label for="apellidoUsuario">Apellido</label>
+						<input type="text" name="apellidoUsuario" class="form-control" id="apellidoUsuario" required="required" width= "100vw">
+					</div>
+					
+					<div class="form-group required">
+						<label for="userEmail">Email</label>
+						<input type="email" name="userEmail" class="form-control" id="userEmail" required="required" width= "100vw">
+
+						<label for="userPassword">Contraseña</label>
+						<input type="password" name="userPassword" class="form-control" id="userPassword" required="required" width= "100vw">
+					</div>
+					
+					<div>						
+						<label for="userDireccion">Direccion</label>
+						<input type="text" name="direccion" class="form-control" id="userDireccion"  width= "100vw">
+
+						<label for="userTelefono">Teléfono</label>
+						<input type="number" name="telefono" class="form-control" id="userTelefono" width= "100vw">						
+					</div>
+					
+					<div class="container">
+						<label for="userAvatar">Cargar Avatar</label>
+						<input class="btn" type="file" name="userAvatar" width= "100vw">
+					</div>				
+					
+					<button type="submit" class="container btn btn-success btn-lg btn-block col-md-6 mb-6">Crear usuario</button>								
+				</form>
+			</div>
+		</div>
+	</div>	
 </body>	
 </html>

@@ -3,6 +3,7 @@ const express = require('express');
 const path = require('path');
 const methodOverride =  require('method-override');
 const mainRouter = require('./routes/main');
+const usersRouter = require('./routes/users');
 
 
 // ************ express() - (No tocar) ************
@@ -21,7 +22,7 @@ app.set('views', path.join(__dirname, '/views')); // Define la ubicación de la 
 
 // ************ Sistema de Rutas ************
 app.use('/', mainRouter);
-
+app.use('/users', usersRouter);
 
 
 

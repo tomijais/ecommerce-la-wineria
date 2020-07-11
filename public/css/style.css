@@ -25,3 +25,6 @@
 
 /*====== Carga de Productos ======*/
 @import 'partials/_productos_carga.css';
+
+/*====== Registro usuario ======*/
+@import 'partials/_registroUsuario.css';

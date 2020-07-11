@@ -14,12 +14,7 @@ const controller = {
 		res.render('producto_detalle', {
 			productos: products
 		});
-	},
-	registro: (req, res) => {
-		res.render('registro', {
-			productos: productos
-		});
-	},
+	},	
 	carrito: (req, res) => {
 		res.render('carrito', {
 			productos: productos
