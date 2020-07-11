@@ -1,0 +1,82 @@
+h4.titCargaProd {
+    text-align: center;
+    margin-top: 10%;
+    margin-bottom: 2%;
+    background: rgba(211, 211, 211, 0.733);
+}
+
+div.contenedorCarga {
+    display: flex;
+    margin-left: 10px;
+    margin-right: 10px;
+    box-sizing: border-box;
+    margin-bottom: 5%;
+    
+}
+
+div.contenedorCarga form {
+    display: flex;
+    width: 100%;
+    
+}
+
+div.contenedorCarga form div.cargaIzq {
+    width: 35%;
+    height: 100%;
+    
+    
+}
+
+section.cargaImgProd {
+    width: 70%;
+    margin-right: 10%;
+    margin-left: 10%;
+    height: 250px;
+    border: 2px solid grey;
+    
+}
+div.contenedorCarga form div.cargaIzq input {
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 2%;
+}
+div.contenedorCarga form div.cargaDer {
+    width: 65%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    flex-wrap: nowrap;
+}
+
+div.contenedorCarga form div.cargaDer div.formCarga {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    
+}
+
+div.contenedorCarga form div.cargaDer div.formCarga label {
+    width: 30%;
+    text-align: center;
+    padding-right: 10px;
+    font-size: 22px;
+}
+div.contenedorCarga form div.cargaDer div.formCarga input {
+    width: 70%;
+    margin-right: 10px;
+    
+}
+div.contenedorCarga form div.cargaDer div.formCarga select {
+    width: 70%;
+    margin-right: 10px;
+    
+}
+
+
+
+div.contenedorCarga form div.cargaDer button {
+    margin: 0 auto;
+    font-size: 22px;
+}
+

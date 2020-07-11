@@ -19,3 +19,9 @@
 
 /*====== Main-Footer ======*/
 @import 'partials/_footer.css';
+
+/*====== Administración de Productos ======*/
+@import 'partials/_productos_admin.css';
+
+/*====== Carga de Productos ======*/
+@import 'partials/_productos_carga.css';

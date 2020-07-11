@@ -41,17 +41,17 @@
 		<!-- Mostrar productos -->
 		<div class="container">
 			<div class="row">
-				<% for(let i=0; i< products.length; i++) { %>
+				<% for(let i=0; i< productos.length; i++) { %>
 					<div class="col-12 col-md-6 col-xl-3">
 						<section class="productos">
 							<a href="/products/detail/¿?">
 								<figure class="">
-									<img src="/images/default-image.png" alt="<%= products[i].name %>">
+									<img src="/images/default-image.png" alt="<%= productos[i].name %>">
 								</figure>
 								<article class="">
-									<h3><%= products[i].name %></h3>
-									<h4>$ <%= products[i].price %></h4>
-									<span><%= products[i].discount %> % OFF</span>
+									<h3><%= productos[i].name %></h3>
+									<h4>$ <%= productos[i].price %></h4>
+									<span><%= productos[i].discount %> % OFF</span>
 								</article>
 							</a>
 							<br>
