@@ -1,6 +1,8 @@
 /*====== Basics ======*/
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -8,7 +10,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: var(--base-font-family);
-  background-color: var(--light-gray);  
+  background-color: var(--crema);  
 }
 
 ul,
@@ -33,6 +35,7 @@ a {
 
 img {
   width: 100%;
+  border-radius: 10px;
 }
 
 img.logo {
@@ -47,18 +50,41 @@ img.logo {
 .productos-titulo {
   text-align: center;
   font-weight: bold;
+  font-size: 5vh;
+  margin: 30px 0;
 }
 
 .productos {
   margin: 0 auto;
-  padding-bottom: 10px;
+  margin-bottom: 15px;
+  padding-bottom: 3px;
+  background-color: white;
+  border-radius: 10px;
 }
 
-.productos a{
+a.producto{
   text-align: center;
   text-decoration: none;
   font-family: var(--base-font-family);
 }
+a.nombre-producto{
+  width: 10px;
+}
+a.extras-producto{
+  display: flex;
+  justify-content: center;
+}
+a.extras-producto span{
+  margin-left: 5px;
+}
+
+a.extras-producto:hover{
+color: black;
+text-align: center;
+text-decoration: none;
+font-family: var(--base-font-family);
+}
+
 
 article h4 {
   display: flex;
@@ -70,9 +96,19 @@ article span {
   display: flex;
   justify-content: center;
   text-align: center;
-  font-size: 18px;
+  font-size: 13px;
 }
 
 .btn {
   font-family: var(--base-font-family);  
+}
+
+h2,h3{
+  font-size: 1.5rem;
+  padding: 0 2px;
+}
+
+
+.container{
+  max-width: 1400px;
 }

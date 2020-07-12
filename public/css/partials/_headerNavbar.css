@@ -153,7 +153,6 @@
   
   .iconos {
     margin-top: 30px;
-    margin-bottom: 30px;
     font-size: 40px;
   }
   .iconos .container h4 {
@@ -162,8 +161,11 @@
   
   div.iconos div div {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: center;
+    align-items: flex-end;
+  }
+  i{
+    margin-right: 6px;
   }
   
   .btn-toggle-navbar {
