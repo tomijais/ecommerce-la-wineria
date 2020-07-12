@@ -8,7 +8,7 @@ const mainController = require('../controllers/mainController');
 
 
 router.get('/', mainController.index); /* GET - home page */
-router.get('/producto/detalle/:id?', mainController.productoDetalle); /* GET - home page */
+router.get('/producto/detalle/:id', mainController.productoDetalle); /* GET - home page */
 router.get('/carrito', mainController.carrito); /* GET - home page */
 
 

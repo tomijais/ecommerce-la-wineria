@@ -11,9 +11,13 @@ const controller = {
 		});
 	},
 	productoDetalle: (req, res) => {
+		let productoSeleccionado = req.params.id
+		let productoRender = productos.filter(function(elemento){
+			return elemento.id == productoSeleccionado;
+		})
 		res.render('producto_detalle', {
-			productos: products
-		});
+			productos: productoRender
+		})
 	},	
 	carrito: (req, res) => {
 		res.render('carrito', {

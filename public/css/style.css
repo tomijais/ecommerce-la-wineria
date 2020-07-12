@@ -31,3 +31,6 @@
 
 /*====== Registro usuario ======*/
 @import 'partials/_registroUsuario.css';
+
+/*====== Productos Detalle ======*/
+@import 'partials/_productos_detalle.css';

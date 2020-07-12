@@ -15,6 +15,7 @@ const productosController = {
 			productos: productos
 		})
 	}
+	
 }
 
 module.exports = productosController;
