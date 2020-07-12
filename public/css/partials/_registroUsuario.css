@@ -12,6 +12,8 @@
   .info-usuario {
     margin-top: 100px;
     width: 100%;
+    margin-left: 10%;
+    margin-right: 10%;
   }
  
   .info-usuario form label{
@@ -29,6 +31,8 @@
   .info-usuario {
     margin-top: 150px;
     width: 100%;
+    margin-left: 10%;
+    margin-right: 10%;
   }
   
   .info-usuario form label{
