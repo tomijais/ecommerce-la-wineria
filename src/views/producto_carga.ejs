@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <!-- Include Head -->
-<%- include('partials/head', {title: 'Inicio'}) %>
+<%- include('partials/head', {title: 'Admin | Carga producto'}) %>
 <body>
 	<!-- Header -->
 	<%- include('partials/headerNavbar') %>
@@ -9,8 +9,7 @@
 
     <h4 class="titCargaProd">Carga de Nuevo Producto</h4>
 
-	<div class="contenedorCarga">
-		
+	<div class="contenedorCarga">	
 
 		<form action="/" method="post" enctype="multipart/form-data">
 		
@@ -43,13 +42,12 @@
 				  <select class="form-control" name="tipoProducto" id="tipoProducto">
 					  <option value="cerveza">Cerveza</option>
 					  <option value="vino">Vino</option>
-					  <option value="champagna">Champagna</option>
-					  <option value="whisky">Whisky</option>
-				  
+					  <option value="champagna">Espumante</option>
+					  <option value="whisky">Whisky</option>				  
 				  </select>
 				</div>
 				<div class="formCarga">
-				<label for="regionProducto">Región Producto</label>
+				<label for="regionProducto">Región</label>
 				  <input type="text" name="regionProducto" class="form-control" id="regionProducto" aria-describedby="region">
 				</div>
 				<div class="formCarga">
@@ -65,18 +63,15 @@
 				  <input type="number" name="stockProducto" class="form-control" id="stockProducto" aria-describedby="stock">
 				</div>
 				<div class="formCarga">
-				<label for="descripcionProducto">Descripción detallada</label>
+				<label for="descripcionProducto">Descripción</label>
 				  <input type="text" name="descripcionProducto" class="form-control" id="descripcionProducto" aria-describedby="descripcion">
 				</div>
 				<br>
-				<button type="submit">Agregar producto</button>
-				
+				<button type="submit" class="btn btn-success">Agregar producto</button>
 			</div>
-		
 		</form>
-		
 	</div>
-	
+	<br>
 	<!-- footer -->
 	<%- include('partials/footer') %>
 	<!-- /footer -->
