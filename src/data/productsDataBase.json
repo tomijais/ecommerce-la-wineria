@@ -1,1 +1,88 @@
-[{"id":2,"name":"Vino Bressia Red Blend","price":1400,"discount":3,"category":"in-sale","description":"Es un vino de color rojo profundo intenso con tonos púrpuras. En nariz presenta un balanceado equilibrio varietal, donde se destacan los aromas a moras, frambuesas y una elegante presencia de madera. En boca se ofrece muy amplio, de gran volumen y consistente. Recomendamos decantar este vino al menos una hora antes de beberse. Temperatura de servicio 17 °C.","image":"prueba1.jpg"},{"id":3,"name":"Vino Angelica Zapata Malbec","price":2000,"discount":25,"category":"in-sale","description":"Angélica Zapata Malbec es un blend proveniente de uvas Malbec de diferentes viñedos. El resultado es un vino de gran concentración y elegancia. El viñedo Angélica aporta aromas de ciruelas maduras, mermelada de frutos rojos, suavidad y volumen al paladar. La temperatura adecuada para su consumo es entre 16º y 18º C.","image":"prueba2.jpg"},{"id":4,"name":"Lagarde Cabernet Sauvignon","description":"Complejo con buen caudal de especias, frutos negros y tonos balsámicos. Crianza prolija e integrada al vino que aporta aromas de tostado leve, vainilla y clavo de olor. Al paladar resulta amable y sabroso con buena fluidez y frescura. Medio de boca franco que recuerda a mermelada de frutos negros y especias. taninos firmes de textura amable, final prolongado de regusto herbal.","price":1500,"discount":10,"image":"prueba3.jpg","category":"in-sale"},{"id":5,"name":"Vino LTU Wines Malbec","description":"Este gran vino nace únicamente de grandes añadas y es un Single Vineyard de Malbec. De intenso color violeta. Bien complejo, con gran concentración y balance. Se destacan notas frescas a arándanos y cassis combinado con aromas más maduros como higos tosta. La temperatura adecuada para su consumo es entre 16º y 18º C.","price":2349,"discount":20,"image":"default-image.png","category":"in-sale"},{"id":6,"name":"Vino Las Perdices Reserva Pinot","description":" Rojo violáceo, concentrado y brillante. Aromas de frutos del bosque maduros, especias y dejos balsámicos con tonos de ciruelas maduras y fondo tostado. Paladar resuelto que fluye sabroso y expresivo. Centro de boca jugoso con buen cuerpo y taninos redondos. Final largo de regusto balsámico y frutal.","price":1200,"discount":12,"image":"default-image.png","category":"in-sale"},{"id":7,"name":"Zuccardi Blanc de Blancs","description":"De color amarillo verdoso, presenta una constante fina y continua cadena de burbujas. El largo tiempo en levadura aporta complejidad, miel, fruta blanca, típica del Chardonnay proveniente de Tupungato, pan tostado, manteca y bizcochuelo. De gran volumen en boca. Las notas a miel se hacen presentes nuevamente, combinándose con notas a cereales. Temperatura de servicio para este vino es entre 6º y 8º C.","price":1200,"discount":5,"image":"default-image.png","category":"in-sale"},{"id":8,"name":"Alma Negra Brut Nature","description":"Dorado con reflejos acerados. Intensidad aromática, frutal y con notas a tostados. Envolvente, con una acidez ligera que le brinda frescura. La temperatura adecuada para su consumo es entre 6º y 7º C.","price":1000,"discount":2,"image":"default-image.png","category":"in-sale"},{"id":9,"name":"Luigi Bosca Brut Nature","description":"De color dorado claro, con aroma fresco que recuerda a manzana verde y durazno blanco. También tiene algunas notas cítricas y de levadura. Burbujas delicadas y finas que permanecen en la copa. La temperatura adecuada para disfrutar este espumante es de 6º C.","price":900,"discount":0,"image":"default-image.png","category":"visited"}]
+[
+  {
+    "id": 0,
+    "name": "Vino Bressia Red Blend",
+    "price": 1400,
+    "discount": 3,
+    "category": "in-sale",
+    "description": "Es un vino de color rojo profundo intenso con tonos púrpuras. En nariz presenta un balanceado equilibrio varietal, donde se destacan los aromas a moras, frambuesas y una elegante presencia de madera. En boca se ofrece muy amplio, de gran volumen y consistente. Recomendamos decantar este vino al menos una hora antes de beberse. Temperatura de servicio 17 °C.",
+    "image": "vino-bressia-red-blend.jpg"
+  },
+  {
+    "id": 1,
+    "name": "Vino Angelica Zapata Malbec",
+    "price": 2000,
+    "discount": 25,
+    "category": "in-sale",
+    "description": "Angélica Zapata Malbec es un blend proveniente de uvas Malbec de diferentes viñedos. El resultado es un vino de gran concentración y elegancia. El viñedo Angélica aporta aromas de ciruelas maduras, mermelada de frutos rojos, suavidad y volumen al paladar. La temperatura adecuada para su consumo es entre 16º y 18º C.",
+    "image": "vino-angelica-zapata-malbec.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Lagarde Cabernet Sauvignon",
+    "description": "Complejo con buen caudal de especias, frutos negros y tonos balsámicos. Crianza prolija e integrada al vino que aporta aromas de tostado leve, vainilla y clavo de olor. Al paladar resulta amable y sabroso con buena fluidez y frescura. Medio de boca franco que recuerda a mermelada de frutos negros y especias. taninos firmes de textura amable, final prolongado de regusto herbal.",
+    "price": 1500,
+    "discount": 10,
+    "image": "default-image.png",
+    "category": "in-sale"
+  },
+  {
+    "id": 3,
+    "name": "Vino LTU Wines Malbec",
+    "description": "Este gran vino nace únicamente de grandes añadas y es un Single Vineyard de Malbec. De intenso color violeta. Bien complejo, con gran concentración y balance. Se destacan notas frescas a arándanos y cassis combinado con aromas más maduros como higos tosta. La temperatura adecuada para su consumo es entre 16º y 18º C.",
+    "price": 2349,
+    "discount": 20,
+    "image": "vino-ltu-wines-malbec.jpg",
+    "category": "in-sale"
+  },
+  {
+    "id": 4,
+    "name": "Vino Las Perdices Reserva Pinot",
+    "description": " Rojo violáceo, concentrado y brillante. Aromas de frutos del bosque maduros, especias y dejos balsámicos con tonos de ciruelas maduras y fondo tostado. Paladar resuelto que fluye sabroso y expresivo. Centro de boca jugoso con buen cuerpo y taninos redondos. Final largo de regusto balsámico y frutal.",
+    "price": 1200,
+    "discount": 12,
+    "image": "vino-las-perdices-reserva-pinot.jpg",
+    "category": "in-sale"
+  },
+  {
+    "id": 5,
+    "name": "Zuccardi Blanc de Blancs",
+    "description": "De color amarillo verdoso, presenta una constante fina y continua cadena de burbujas. El largo tiempo en levadura aporta complejidad, miel, fruta blanca, típica del Chardonnay proveniente de Tupungato, pan tostado, manteca y bizcochuelo. De gran volumen en boca. Las notas a miel se hacen presentes nuevamente, combinándose con notas a cereales. Temperatura de servicio para este vino es entre 6º y 8º C.",
+    "price": 1200,
+    "discount": 5,
+    "image": "default-image.png",
+    "category": "in-sale"
+  },
+  {
+    "id": 6,
+    "name": "Alma Negra Brut Nature",
+    "description": "Dorado con reflejos acerados. Intensidad aromática, frutal y con notas a tostados. Envolvente, con una acidez ligera que le brinda frescura. La temperatura adecuada para su consumo es entre 6º y 7º C.",
+    "price": 1000,
+    "discount": 2,
+    "image": "default-image.png",
+    "category": "in-sale"
+  },
+  {
+    "id": 7,
+    "name": "Luigi Bosca Brut Nature",
+    "description": "De color dorado claro, con aroma fresco que recuerda a manzana verde y durazno blanco. También tiene algunas notas cítricas y de levadura. Burbujas delicadas y finas que permanecen en la copa. La temperatura adecuada para disfrutar este espumante es de 6º C.",
+    "price": 900,
+    "discount": 0,
+    "image": "default-image.png",
+    "category": "visited"
+  },
+  {
+    "id": 8,
+    "name": "Vino toro",
+    "year": "2020",
+    "bodega": "TORO",
+    "type": "vino",
+    "region": "Argentina",
+    "alcohol": "Mucha",
+    "description": "Un buen vino toro",
+    "price": "150",
+    "discount": "10",
+    "image": "vino-toro.jpg",
+    "stock": "2"
+  }
+]

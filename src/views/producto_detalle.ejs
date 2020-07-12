@@ -14,19 +14,19 @@
     <div class="container producto-wrapper">
 		<div class="row">
 			<div class="col-12">
-				<h4 class="titDetalleProd"><a href="/">Inicio</a> / <a href="/">Categoría</a> / <%= productos[0].name %></h4>
+				<h4 class="titDetalleProd"><a href="/">Inicio</a> / <a href="/">Categoría</a> / <%= productos[productoRender].name %></h4>
 			</div>
 			<div class="producto-detalle">
 				<div class="row">
 				<div class="col-12 col-md-7 col-lg-7">
-					<img src="/images/products/<%= productos[0].image %>" alt="">
+					<img src="/images/products/<%= productos[productoRender].image %>" alt="">
 					<span>Descripción del producto</span>
-					<p class="descripcionProducto" ><%= productos[0].description %></p>
+					<p class="descripcionProducto" ><%= productos[productoRender].description %></p>
 				</div>
 						
 				<div class="col-12 col-md-5 col-lg-5">
-					<h3><%= productos[0].name %></h3>
-					<h3>$ <%= productos[0].price %></h3>
+					<h3><%= productos[productoRender].name %></h3>
+					<h3>$ <%= productos[productoRender].price %></h3>
 					<form action="">
 						<label for="cantidad">Cantidad</label>
 						<input type="number" value="1">
@@ -52,15 +52,42 @@
 		</div>
     </div>
 
-	<div class="container">
-		<h4>Productos similares</h4>
-		<div class="row">
-			<div class="col-12 contProdSimilar">
-				<img class="prodSimilar" src="/images/products/prueba1.jpg" alt="">
-				<img class="prodSimilar" src="/images/products/prueba2.jpg" alt="">
-				<img class="prodSimilar" src="/images/products/prueba3.jpg" alt="">
+	<div>
+		<h4 class="productos-similares">Productos similares</h4>
+		<div class="container">
+			<div class="row">
+			  <% for(let i=0; i< 4; i++) { %>
+			  <div class="col-12 col-md-6 col-xl-3">
+				<section class="productos">
+				  <a href="/producto/detalle/<%= productos[i].id %>">
+					<figure class="">
+					  <img class="img-fluid" src="/images/products/<%= productos[i].image %>"
+						alt="<%= productos[i].name %>"
+					  />
+					</figure>
+				  </a>
+				  
+				  <article >
+						<a href="/producto/detalle/<%= productos[i].id %>" class="producto">
+							<h3 class="nombre-producto"><%= productos[i].name %></h3>
+						</a>
+					<div >
+						<a href="/producto/detalle/<%= productos[i].id %>" class="extras-producto">
+							<h4>$ <%= productos[i].price %></h4>
+							<span><%= productos[i].discount %> % OFF</span>
+						</a>
+					</div>
+				  </article>
+	
+				  
+				  <button type="button" class="btn btn-primary btn-lg btn-block">
+					Agregar al carrito
+				  </button>
+				</section>
+			  </div>
+			  <% } %>
 			</div>
-		</div>
+		  </div>
 
 	</div>
 </div>

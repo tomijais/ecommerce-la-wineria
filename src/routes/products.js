@@ -10,7 +10,8 @@ const productosController = require('../controllers/productosController');
 
 
 router.get('/producto/', productosController.productoAdmin); /* GET - Admin*/
-router.get('/producto/carga', productosController.productoCarga); /* GET - Admin Carga de productos */
+router.get('/producto/carga', productosController.productoCrear); /* GET - Admin Carga de productos */
+router.post('/producto/carga',productosController.productoGuardar);
 
 
 module.exports = router;

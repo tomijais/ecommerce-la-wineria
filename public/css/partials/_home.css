@@ -34,9 +34,11 @@ a {
 }
 
 img {
-  width: 100%;
+  max-width: 100%;
   border-radius: 10px;
 }
+
+
 
 img.logo {
   width: 60%;
@@ -104,7 +106,7 @@ article span {
 }
 
 h2,h3{
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   padding: 0 2px;
 }
 

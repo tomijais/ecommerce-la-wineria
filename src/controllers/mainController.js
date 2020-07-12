@@ -16,7 +16,8 @@ const controller = {
 			return elemento.id == productoSeleccionado;
 		})
 		res.render('producto_detalle', {
-			productos: productoRender
+			productoRender: productoSeleccionado,
+			productos: productos
 		})
 	},	
 	carrito: (req, res) => {
