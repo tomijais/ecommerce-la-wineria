@@ -1,6 +1,9 @@
+.first-row {
+    margin-bottom: 10px;
+}
+
 h3.adminProd {
     padding-top: 12%;
-    margin-bottom: 20px;
     text-align: center;
 }
 
@@ -12,13 +15,11 @@ div.contenedorAdmin {
 
 
 @media (min-width: 768px) and (max-width: 1099px) {
-
     h3.adminProd {
-        padding-top: 15%;
-        
+        padding-top: 15%;        
     }
+    
     div.card {
-        height: 150px;
         width: 280px;
     }
 
@@ -28,12 +29,10 @@ div.contenedorAdmin {
 
     h3.adminProd {
         padding-top: 12%;
-        margin-bottom: 40px;
-        
+        margin-bottom: 40px;        
     }
 
     div.card {
-        height: 150px;
         width: 280px;
     }
 }
