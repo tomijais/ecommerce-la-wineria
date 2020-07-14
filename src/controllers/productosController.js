@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-
+const multer = require('multer');
 const productosFilePath = path.join(__dirname, '../data/productsDataBase.json');
 const productos = JSON.parse(fs.readFileSync(productosFilePath, 'utf-8'));
 
@@ -26,7 +26,7 @@ const productosController = {
 			productos: productos
 		})
 	},
-	productoGuardar: (req,res) => {
+	productoGuardar: (req,res, next) => {
 		let nuevoProducto = {
 			id: ultimoId(productos) + 1,
 			name: req.body.nombreProducto,
@@ -38,7 +38,7 @@ const productosController = {
 			description: req.body.descripcionProducto,
 			price: req.body.precioProducto,
 			discount: req.body.descuentoProducto,
-			image: req.body.avatar,
+			image: req.files[0].filename,
 			stock: req.body.stockProducto,
 
 		};
