@@ -38,3 +38,6 @@
 
 /*====== Productos Detalle ======*/
 @import 'partials/_productos_detalle.css';
+
+/*====== Carrito de compras ======*/
+@import 'partials/_carrito.css';
