@@ -21,10 +21,14 @@
 					
 					<div class="form-group required">
 						<label for="userEmail">Email</label>
-						<input type="email" name="userEmail" class="form-control" id="userEmail" required="required" width= "100vw">
+						<input type="text" value="<%= (typeof old != 'undefined' && !errors.email) ? old.email : '' %>" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+						<small class="text-danger"><%= (typeof errors != 'undefined' && errors.email) ? errors.email.msg : '' %></small>
+
 
 						<label for="userPassword">Contraseña</label>
 						<input type="password" name="userPassword" class="form-control" id="userPassword" required="required" width= "100vw">
+						<small class="text-danger"><%= (typeof errors != 'undefined' && errors.email) ? errors.email.msg : '' %></small>
+
 					</div>
 					
 					<div>						

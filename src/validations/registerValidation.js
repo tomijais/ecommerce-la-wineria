@@ -14,5 +14,5 @@ module.exports = [
         }
         return true
       }).withMessage('Este mail ya está registrado!'),
-    check('password').isLength({min: 6, max: 16}).withMessage('Dale, poné una contraseña digna')
+    check('password').isLength({min: 6}).withMessage('Dale, poné una contraseña digna')
 ];

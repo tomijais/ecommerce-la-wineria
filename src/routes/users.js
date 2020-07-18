@@ -4,7 +4,6 @@ const router = express.Router();
 const multer = require('multer');
 const path = require('path');
 
-
 // ************ Middlewares ************
 const loginValidations = require('../validations/loginValidation.js')
 const registerValidation = require('../validations/registerValidation.js')
@@ -14,7 +13,7 @@ const registerValidation = require('../validations/registerValidation.js')
 let storage = multer.diskStorage({
   destination: function (req, file, cb) {
     cb(null, path.join(__dirname, '../../public/images/uploads/avatars'))
-  },
+  }, 
   filename: function (req, file, cb) {
     cb(null,`${file.fieldname}-${req.body.email}-${Date.now() + path.extname(file.originalname)}`)
   }
