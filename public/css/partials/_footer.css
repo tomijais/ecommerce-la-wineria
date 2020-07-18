@@ -4,6 +4,7 @@
   color: var(--white);
   font-size: 14px;    
   box-shadow: 0px 11px 10px -8px rgba(205, 114, 241, 0.4);
+  
 }
 
 .main-footer .container-fluid .row a:hover {
@@ -128,4 +129,3 @@ article.footer-data a.redes {
     margin-right: 5px;
   }
 }
-

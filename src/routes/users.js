@@ -19,6 +19,12 @@ let upload = multer({ storage: storage })
 const usersController = require('../controllers/usersController');
 
 router.get('/', usersController.index); //hacer vista del usuario
+
+router.get('/login', usersController.login); 
+router.post('/login', usersController.ingresar);
+
+
+
 router.get('/register', usersController.register);
 router.post('/register', upload.any(), usersController.saveUser);
 

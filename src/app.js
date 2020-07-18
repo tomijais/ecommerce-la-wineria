@@ -1,19 +1,26 @@
 // ************ Require's ************
 const express = require('express');
+const app = express();
 const path = require('path');
 const methodOverride =  require('method-override');
+const session = require('express-session');
+const cookieParser = require('cookie-parser');
+
+
+// ************ Rutas ************
 const mainRouter = require('./routes/main');
 const usersRouter = require('./routes/users');
-const productsRouter = require('./routes/products')
+const productsRouter = require('./routes/products');
 
-
-// ************ express() - (No tocar) ************
-const app = express();
 
 // ************ Middlewares - (No tocar) ************
 app.use(express.static(path.join(__dirname, '../public')));  // Necesario para los archivos estáticos en el folder /public
+
 app.use(express.urlencoded({ extended: false }));
-app.use(express.json());
+app.use(express.json());// Necesario para leer los JSON
+
+app.use(cookieParser());
+app.use(session({secret: 'May the force be with you!'}));
 
 // ************ Template Engine - (No tocar) ************
 app.set('view engine', 'ejs');
@@ -24,7 +31,7 @@ app.set('views', path.join(__dirname, '/views')); // Define la ubicación de la 
 // ************ Sistema de Rutas ************
 app.use('/', mainRouter);
 app.use('/users', usersRouter);
-app.use('/admin', productsRouter)
+app.use('/admin', productsRouter);
 
 
 
