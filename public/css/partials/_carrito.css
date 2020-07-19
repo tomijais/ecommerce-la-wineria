@@ -1,12 +1,60 @@
-
-
-table {
-    width: 100%;
-}
-table tr {
-    
+.title-pages {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 2vw;
 }
 
+.title-pages h4 {
+    font-size: 18px;
+}
+
+.title-pages h4 a:hover{
+    text-decoration: none;
+    color: var(--light-blue);
+}
+
+
+.sale-details form div button {
+    background-color: teal;
+    border-radius: 5px;
+    padding: 1px;
+    margin-left: 2vw;
+    text-align: center;
+    text-decoration: none; 
+}
+
+.sale-details form label {
+    margin-top: 3vh;
+    margin-bottom: 2vh;
+}
+
+.sale-details form div input {
+    width: 70%;
+}
+
+.sale-details .second-form {
+    margin-top: 3vh;
+}
+
+.sale-details .second-form div label {
+    width: 20%;
+    margin-right: 2vw;
+}
+
+
+.sale-details .second-form div input {
+    width: 70%;
+}
+
+.sale-details .second-form form button {
+    background-color: teal;
+    border-radius: 5px;
+    margin: 10% 25%;
+    padding: 5px;    
+    text-decoration: none;
+}
+
+/*---- TR TH ----*/
 table tr th.prod {
     width: 30%;
     padding-top: 10px;
@@ -20,40 +68,82 @@ table tr th.rest {
     padding-bottom: 10px;
 }
 
-table tr td.prod {
-    width: 30%;
-}
-table tr td {
-    padding-top: 5px;
-}
+/*---- TR TD ----*/
 table tr td.rest {
     width: 15%;
     text-align: center;
 }
+
 table tr td.rest img {
     width: 70%;
 }
+
 table tr td.rest input {
     width: 40%;
     text-align: center;
 }
+table tr td.prod a:hover {
+    text-decoration: none;
+    color: var(--light-blue);
+}
 
+/*---- BUTTONS ----*/
 div.botonesCarrito {
     display: flex;
     justify-content: flex-end;
 }
+
 a.botonCarrito {
-    margin-top: 10px;
-    margin-right: 10px;
-    padding: 10px;
-    text-align: center;
-    border-radius: 5px;
-    text-decoration: none;
-    height: 50px;
     background-color: teal;
+    height: 40px;
+    margin-right: 6px;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;   
 }
 
+/*---- MEDIA QUERIES ----*/
+@media (min-width: 768px) and (max-width: 1099px) {
+    .title-pages {
+        margin-top: 10%;
+        margin-left: 2vw;
+    }
 
+    .sale-details form div button {
+        margin: 2%;
+    }
+    
+    .sale-details form div input {
+        width: 100%;
+    }
 
+    .sale-details .second-form div input {
+        width: 100%;
+    }
 
+    .sale-details .second-form form button {
+        margin: 10% 8%;
+        padding: 5px;    
+    }
+
+}
+
+@media (min-width: 1100px) {
+
+    .title-pages {
+        margin-top: 10%;
+        margin-left: 2vw;
+    }
+
+    .sale-details form div input {
+        width: 69%;
+    }
+
+    .sale-details form div button {
+        width: 25%;
+        margin-left: 1vw;
+    }
+
+}
 

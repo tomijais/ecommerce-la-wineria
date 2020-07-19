@@ -6,97 +6,97 @@
 	<!-- Header -->
 	<%- include('partials/headerNavbar') %>
 	<!-- /Header -->
-
+	
 	<div class="container">
 		<div class="row contProdDetalle">
 			<div class="col-12 col-md-10 col-lg-10">
-
-    <div class="container producto-wrapper">
-		<div class="row">
-			<div class="col-12">
-				<h4 class="titDetalleProd"><a href="/">Inicio</a> / <a href="/">Categoría</a> / <%= productos[productoRender].name %></h4>
-			</div>
-			<div class="producto-detalle">
-				<div class="row">
-				<div class="col-12 col-md-7 col-lg-7">
-					<img src="/images/products/<%= productos[productoRender].image %>" alt="">
-					<span>Descripción del producto</span>
-					<p class="descripcionProducto" ><%= productos[productoRender].description %></p>
-				</div>
-						
-				<div class="col-12 col-md-5 col-lg-5">
-					<h3><%= productos[productoRender].name %></h3>
-					<h3>$ <%= productos[productoRender].price %></h3>
-					<form action="">
-						<label for="cantidad">Cantidad</label>
-						<input type="number" value="1">
-						<button type="submit" class="btn btn-primary btn-lg">Agregar al carrito</button>
-					</form>
-					<br>
-					<span>Fecha Producto</span>
-					<h5>Fecha producto</h5>
-					<span>Bodega</span>
-					<h5>Bodega</h5>
-					<span>Tipo/Categoria</span>
-					<h5>Tipo/Categoria</h5>
-					<span>Región</span>
-					<h5>Región</h5>
-					<span>Graduación Alcoholica</span>
-					<h5>Graduación Alcoholica</h5>
-					<br>
-					
+				
+				<div class="container producto-wrapper">
+					<div class="row">
+						<div class="col-12">
+							<h4 class="titDetalleProd"><a href="/">Inicio</a> / <a href="/">Categoría</a> / <%= productos[productoRender].name %></h4>
+						</div>
+						<div class="producto-detalle">
+							<div class="row">
+								<div class="col-12 col-md-7 col-lg-7">
+									<img src="/images/products/<%= productos[productoRender].image %>" alt="">
+									<span>Descripción del producto</span>
+									<p class="descripcionProducto" ><%= productos[productoRender].description %></p>
+								</div>
+								
+								<div class="col-12 col-md-5 col-lg-5">
+									<h3><%= productos[productoRender].name %></h3>
+									<h3>$ <%= productos[productoRender].price %></h3>
+									<form action="">
+										<label for="cantidad">Cantidad</label>
+										<input type="number" value="1">
+										<button type="submit" class="btn btn-primary btn-lg">Agregar al carrito</button>
+									</form>
+									<br>
+									<span>Fecha Producto</span>
+									<h5>Fecha producto</h5>
+									<span>Bodega</span>
+									<h5>Bodega</h5>
+									<span>Tipo/Categoria</span>
+									<h5>Tipo/Categoria</h5>
+									<span>Región</span>
+									<h5>Región</h5>
+									<span>Graduación Alcoholica</span>
+									<h5>Graduación Alcoholica</h5>
+									<br>
+									
+								</div>
+								
+							</div>
+						</div>
+					</div>
 				</div>
 				
+				<div>
+					<h4 class="productos-similares">Productos similares</h4>
+					<div class="container">
+						<div class="row">
+							<% for(let i=0; i< 4; i++) { %>
+								<div class="col-12 col-md-6 col-xl-3">
+									<section class="productos">
+										<a href="/producto/detalle/<%= productos[i].id %>">
+											<figure class="">
+												<img class="img-fluid" src="/images/products/<%= productos[i].image %>"
+												alt="<%= productos[i].name %>"
+												/>
+											</figure>
+										</a>
+										
+										<article >
+											<a href="/producto/detalle/<%= productos[i].id %>" class="producto">
+												<h3 class="nombre-producto"><%= productos[i].name %></h3>
+											</a>
+											<div >
+												<a href="/producto/detalle/<%= productos[i].id %>" class="extras-producto">
+													<h4>$ <%= productos[i].price %></h4>
+													<span><%= productos[i].discount %> % OFF</span>
+												</a>
+											</div>
+										</article>
+										
+										
+										<button type="button" class="btn btn-primary btn-lg btn-block">
+											Agregar al carrito
+										</button>
+									</section>
+								</div>
+								<% } %>
+							</div>
+						</div>
+						
+					</div>
 				</div>
 			</div>
 		</div>
-    </div>
-
-	<div>
-		<h4 class="productos-similares">Productos similares</h4>
-		<div class="container">
-			<div class="row">
-			  <% for(let i=0; i< 4; i++) { %>
-			  <div class="col-12 col-md-6 col-xl-3">
-				<section class="productos">
-				  <a href="/producto/detalle/<%= productos[i].id %>">
-					<figure class="">
-					  <img class="img-fluid" src="/images/products/<%= productos[i].image %>"
-						alt="<%= productos[i].name %>"
-					  />
-					</figure>
-				  </a>
-				  
-				  <article >
-						<a href="/producto/detalle/<%= productos[i].id %>" class="producto">
-							<h3 class="nombre-producto"><%= productos[i].name %></h3>
-						</a>
-					<div >
-						<a href="/producto/detalle/<%= productos[i].id %>" class="extras-producto">
-							<h4>$ <%= productos[i].price %></h4>
-							<span><%= productos[i].discount %> % OFF</span>
-						</a>
-					</div>
-				  </article>
-	
-				  
-				  <button type="button" class="btn btn-primary btn-lg btn-block">
-					Agregar al carrito
-				  </button>
-				</section>
-			  </div>
-			  <% } %>
-			</div>
-		  </div>
-
-	</div>
-</div>
-</div>
-</div>
-    
-    <br><br>
-	<!-- footer -->
-	<%- include('partials/footer') %>
-	<!-- /footer -->
-</body>	
-</html>
+		
+		<br><br>
+		<!-- footer -->
+		<%- include('partials/footer') %>
+		<!-- /footer -->
+	</body>	
+	</html>

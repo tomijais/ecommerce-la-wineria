@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <!-- Include Head -->
-<%- include('partials/head', {title: 'Inicio'}) %>
+<%- include('partials/head', {title: 'Carrito'}) %>
 <body>
 	<!-- Header -->
 	<%- include('partials/headerNavbar') %>
 	<!-- /Header -->
-
-   
 	
-	<h4 class="titDetalleProd"><a href="/">Inicio</a> / <a href="/">Carrito</a></h4>
+	<div class="title-pages">
+		<h4><a href="/">Inicio</a> / <a href="/carrito">Carrito</a></h4>
+	</div>
 	
 	<div class="container">
 		<div class="row">
-			<div class="col-12 col-md-9">
-					
-					<table>
+			<div class="col-12 col-md-9 col-sm-12">					
+				<table class="table table-responsive-sm table-borderless table-hover table-sm">
+					<thead>
 						<tr>
 							<th class="rest"></th>
 							<th class="prod">Productos</th>
@@ -24,61 +24,69 @@
 							<th class="rest">Subtotal</th>
 							<th class="rest">Eliminar</th>
 						</tr>
+					</thead>					
+					<tbody>
 						<tr>
-							<td class="rest"><img src="images/products/vino-toro.jpg" alt=""></td>
+							<td class="rest"><img src="images/products/vino-bressia-red-blend.jpg" alt=""></td>
 							<td class="prod"><a href="#">Nombre de Producto</a></td>
 							<td class="rest">$ precio</td>
-							<td class="rest"><input type="number" value="1"></td>
+							<td class="rest"><input type="number" value="1" min="1"></td>
 							<td class="rest">$ Subtotal</td>
 							<td class="rest"><a href=""><i class="fas fa-trash-alt"></i></a></td>
 						</tr>
 						<tr>
-							<td class="rest"><img src="images/products/vino-toro.jpg" alt=""></td>
+							<td class="rest"><img src="images/products/vino-bressia-red-blend.jpg" alt=""></td>
 							<td class="prod"><a href="#">Nombre de Producto</a></td>
 							<td class="rest">$ precio</td>
-							<td class="rest"><input type="number" value="1"></td>
+							<td class="rest"><input type="number" value="1" min="1"></td>
 							<td class="rest">$ Subtotal</td>
 							<td class="rest"><a href=""><i class="fas fa-trash-alt"></i></a></td>
 						</tr>
-
-					</table>
+					</tbody>					
+				</table>
 					
-					<div class="botonesCarrito">
-					<a href="#" class="botonCarrito">Continuar Comprando</a>
+				<div class="botonesCarrito">
+					<a href="#" class="botonCarrito">Seguir Comprando</a>
 					<a href="#" class="botonCarrito">Limpiar Carrito</a>
-					</div>
+				</div>
+
 			</div>
 
-			<div class="col-12 col-md-3">
-				<form action="">
-					<label for="">Cupon de Descuento</label>
-					<input type="text" name="cupon">
-					<button type="submit">Aplicar</button>
-				</form><br>
 
-				<form action="">
-					<div>
-					<label for="">Subtotal</label>
-					<input type="number" name="cupon" value="2000" disabled>
+			<div class="col-12 col-md-3 col-sm-12">
+				<div class="sale-details">
+					<form action="">
+						<label for="">Cupon de Descuento</label>
+						<div>
+							<input type="text" name="cupon">
+							<button type="submit">Aplicar</button>
+						</div>
+					</form>
+					
+					<div class="second-form">
+						<form action="">
+							<div>
+								<label for="">Subtotal</label>
+								<input type="number" name="cupon" value="2000" disabled>
+							</div>
+							<div>
+								<label for="">Envío</label>
+								<input type="text" name="envio">
+							</div>							
+							<div>
+								<label for="">Total</label>
+								<input type="number" value="2000" disabled>
+							</div>
+							<button type="submit">Finalizar Compra</button>
+						</form>	
 					</div>
-					<div>
-					<label for="">Envío</label>
-					<input type="text" name="envio">
-					<a href="">Calcular</a>
-					</div>
-					<div>
-						<label for="">Total</label>
-						<input type="number" value="2000" disabled>
-					</div>
-					<button type="submit">Finalizar Compra</button>
-				</form>	
-				
-				</div>	
+				</div>				
 			</div>
+			
 		</div>
 	</div>
 
-    <br><br><br><br><br><br><br><br><br><br>
+	
 	<!-- footer -->
 	<%- include('partials/footer') %>
 	<!-- /footer -->
