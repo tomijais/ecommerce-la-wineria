@@ -40,14 +40,26 @@ const productosController = {
 			discount: req.body.descuentoProducto,
 			image: req.files[0].filename,
 			stock: req.body.stockProducto,
-
+		
 		};
 		productos.push(nuevoProducto);
 		fs.writeFileSync(path.join(__dirname, '../data/productsDataBase.json'), JSON.stringify(productos));
 		res.redirect('/admin/producto');
-
-	}
+	},
+	productoIndex: (req,res, next) => {
+		res.render('admin_index', {
+			productos: productos
+		})
+	},
+	editProduct: function (req, res, next) {
+		res.render('producto_edit', {
+			productos: productos
+		})
+	},
+  
+  
 	
 }
 
 module.exports = productosController;
+
