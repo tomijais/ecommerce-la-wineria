@@ -1,17 +1,1 @@
-[
-  {
-    "email": "carlasol@gmail.com",
-    "password": "$2b$10$A.H7IXLvdh8FdDUYW9yn3eF4Tk8qocO/5yzbFB2BWBaBtNdrmvUpG",
-    "avatar": "carla.jpg"
-  },
-  {
-    "email": "juanpablocasa.lca@gmail.com",
-    "password": "$2b$10$anqQe7tbPDsnhxcwfP6i9eR/qkeP25SbYOA/BJp2YM.541WQoHWsa",
-    "avatar": "userAvatar-undefined-1594504289736.jpg"
-  },
-  {
-    "email": "tomijais@gmail.com",
-    "password": "$2b$10$QpfG31U16Jg9Z1rthRTNkeloqZVXRIP87S.vYrCdEd1xGgiNe6O0W",
-    "avatar": "userAvatar-undefined-1595054858965.png"
-  }
-]
+[{"email":"juanpablocasa.lca@gmail.com","password":"$2b$10$anqQe7tbPDsnhxcwfP6i9eR/qkeP25SbYOA/BJp2YM.541WQoHWsa","avatar":"userAvatar-undefined-1594504289736.jpg"},{"email":"tomijais@gmail.com","password":"$2b$10$QpfG31U16Jg9Z1rthRTNkeloqZVXRIP87S.vYrCdEd1xGgiNe6O0W","avatar":"userAvatar-undefined-1595054858965.png"},{"email":"carlasolrocca@gmail.com","password":"$2b$10$ZsADUu2RaVDFil2r.pHrKOrMqQAyOLs33SK0FGC.AxReTxk0L3Q3i","avatar":"userAvatar-carlasolrocca@gmail.com-1595567341315.png"}]

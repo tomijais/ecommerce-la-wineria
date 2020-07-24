@@ -5,7 +5,6 @@ const path = require('path');
 const multer = require('multer');
 
 
-
 var storage = multer.diskStorage({
     destination:function (req,file,cb){
         cb(null, 'public/images/products/')
@@ -27,7 +26,6 @@ router.get('/producto/carga', productosController.productoCrear); /* GET - Admin
 router.post('/producto/carga',upload.any(),productosController.productoGuardar);
 
 router.get('/index', productosController.productoIndex) /*ADMIN - muestra listado de productos*/
-router.get('/producto/:id/edit', productosController.editProduct) /*ADMIN - form para edicion de producto*/
-/*router.put('/producto/:id/edit', productsController.saveEditProduct); ADMIN - edicion producto por POST*/
-
+router.get('/producto/edit/:id', productosController.editProduct) /*ADMIN - form para edicion de producto*/
+router.put('/producto/edit/:id', productosController.saveEditProduct) /*ADMIN - edicion producto por POST*/
 module.exports = router;

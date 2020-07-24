@@ -39,8 +39,7 @@ const productosController = {
 			price: req.body.precioProducto,
 			discount: req.body.descuentoProducto,
 			image: req.files[0].filename,
-			stock: req.body.stockProducto,
-		
+			stock: req.body.stockProducto,		
 		};
 		productos.push(nuevoProducto);
 		fs.writeFileSync(path.join(__dirname, '../data/productsDataBase.json'), JSON.stringify(productos));
@@ -52,14 +51,25 @@ const productosController = {
 		})
 	},
 	editProduct: function (req, res, next) {
-		res.render('producto_edit', {
-			productos: productos
-		})
+		for(let i = 0; i < productos.length; i++){
+			if(productos[i].id == req.params.id) {
+				res.render('producto_edit', {	elProducto: productos[i]})
+			}
+		}
 	},
-  
-  
-	
+	saveEditProduct: function (req, res) {
+		let productoEditado = {
+			id: req.params.id,
+      ...req.body
+		}
+		for(let i = 0; i < productos.length; i++){
+			if (productos[i].id == productoEditado.id) {
+				productos[i] = productoEditado
+				fs.writeFileSync(path.join(__dirname, '../data/productsDataBase.json'), JSON.stringify(productos));
+        res.redirect(`/producto/detalle/${productoEditado.id}`)
+			}
+		}
+	},
 }
 
 module.exports = productosController;
-

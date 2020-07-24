@@ -7,10 +7,10 @@
   <%- include('partials/headerNavbar') %>
   <!-- /Header -->
   
-  <h4 class="titCargaProd">Editar Producto</h4>
+  <h4 class="titCargaProd">Estás editando el producto de nombre "<%= elProducto.name %>"" y id "<%= elProducto.id %>"" </h4>
   
   <div class="contenedorCarga">
-    <form action="" method="post" enctype="multipart/form-data">
+    <form method="POST" action="/admin/producto/edit/<%= elProducto.id %>?_method=PUT">
       <div class="cargaIzq">
         <section class="cargaImgProd">
           <img src="" alt="" />
@@ -20,7 +20,7 @@
         class="form-control-file"
         id="exampleFormControlFile1"
         name="producto"
-        required="required"
+        file="<%= elProducto.image %>"
         />
       </div>
       
@@ -32,9 +32,10 @@
           name="nombreProducto"
           class="form-control"
           id="nombreProducto"
-          aria-describedby="hola"
+          aria-describedby="name"
           placeholder="Nombre Producto"
           required="required"
+          value="<%= elProducto.name %>"
           />
         </div>
         
@@ -48,6 +49,7 @@
           aria-describedby="anio"
           placeholder="Año Producto"
           required="required"
+          value="<%= elProducto.year %>"
           />
         </div>
         <div class="formCarga required">
@@ -60,6 +62,7 @@
           aria-describedby="bodega"
           placeholder="Bodega"
           required="required"
+          value="<%= elProducto.bodega %>"
           />
         </div>
         <div class="formCarga required">
@@ -84,30 +87,35 @@
           aria-describedby="region"
           placeholder="Región"
           required="required"
+          value="<%= elProducto.region %>"
           />
         </div>
         <div class="formCarga required">
           <label for="graduacionProducto">Graduación alcoholica</label>
           <input
           type="number"
+          min="1"
           name="graduacionProducto"
           class="form-control"
           id="graduacionProducto"
           aria-describedby="graduacion"
           placeholder="Graduación alcoholica"
           required="required"
+          value="<%= elProducto.alcohol %>"
           />
         </div>
         <div class="formCarga required">
           <label for="precioProducto">Precio</label>
           <input
           type="number"
+          min="1"
           name="precioProducto"
           class="form-control"
           id="precioProducto"
           aria-describedby="precio"
           placeholder="Precio"
           required="required"
+          value="<%= elProducto.price %>"
           />
         </div>
         <div class="formCarga required">
@@ -120,6 +128,7 @@
           aria-describedby="descuento"
           placeholder="Descuento"
           required="required"
+          value="<%= elProducto.discount %>"
           />
         </div>
         <div class="formCarga required">
@@ -132,6 +141,7 @@
           aria-describedby="stock"
           placeholder="Stock"
           required="required"
+          value="<%= elProducto.stock %>"
           />
         </div>
         <div class="formCarga required">
@@ -144,15 +154,13 @@
           aria-describedby="descripcion"
           placeholder="Descripción"
           required="required"
+          value="<%= elProducto.description %>"
           />
         </div>
         <br/>
-        <div>
-          <button type="submit" class="btn btn-success">Finalizar Edicion</button>
-          <button type="submit" class="btn btn-danger">Eliminar producto</button>
-        </div>
+          <button type="submit" class="btn btn-success">Guardar Cambios</button>
       </div>
-    </form>
+    </form>    
   </div>
   <br />
   <!-- footer -->
