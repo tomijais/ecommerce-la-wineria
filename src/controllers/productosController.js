@@ -58,6 +58,7 @@ const productosController = {
 		}
 	},
 	saveEditProduct: function (req, res) {
+		
 		let productoEditado = {
 			id: req.params.id,
       ...req.body
@@ -69,7 +70,7 @@ const productosController = {
         res.redirect(`/producto/detalle/${productoEditado.id}`)
 			}
 		}
-	},
+	}
 }
 
 module.exports = productosController;

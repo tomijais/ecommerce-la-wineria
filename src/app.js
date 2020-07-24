@@ -22,6 +22,8 @@ app.use(express.json());// Necesario para leer los JSON
 app.use(cookieParser());
 app.use(session({secret: 'May the force be with you!'}));
 
+app.use(methodOverride('_method')); // Pasar poder pisar el method="POST" en el formulario por PUT y DELETE
+
 // ************ Template Engine - (No tocar) ************
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, '/views')); // Define la ubicación de la carpeta de las Vistas
