@@ -28,4 +28,7 @@ router.post('/producto/carga',upload.any(),productosController.productoGuardar);
 router.get('/index', productosController.productoIndex) /*ADMIN - muestra listado de productos*/
 router.get('/producto/edit/:id', productosController.editProduct) /*ADMIN - form para edicion de producto*/
 router.put('/producto/edit/:id', productosController.saveEditProduct) /*ADMIN - edicion producto por POST*/
+router.get('/producto/delete/:id', productosController.deleteProduct) /*ADMIN - form para edicion de producto*/
+router.delete('/producto/delete/:id', productosController.saveDeleteProduct) /*ADMIN - edicion producto por POST*/
+
 module.exports = router;

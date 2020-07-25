@@ -70,6 +70,27 @@ const productosController = {
         res.redirect(`/producto/detalle/${productoEditado.id}`)
 			}
 		}
+	},
+	deleteProduct: function (req, res, next) {
+		for(let i = 0; i < productos.length; i++){
+			if(productos[i].id == req.params.id) {
+				res.render('producto_delete', {	elProducto: productos[i]})
+			}
+		}
+	},
+	saveDeleteProduct: function (req, res) {
+		
+		let idProductoEliminar = req.params.id;
+		let productosNuevos = productos.filter(function(elemento){
+			return elemento.id != idProductoEliminar;
+		})
+		fs.writeFileSync(path.join(__dirname, '../data/productsDataBase.json'), JSON.stringify(productosNuevos));
+		res.render('admin_index', {
+			productos: productosNuevos
+		})
+
+		
+		
 	}
 }
 

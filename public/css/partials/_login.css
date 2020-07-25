@@ -1,6 +1,18 @@
 .iniciarSesion{
-    margin-top: 200px;
+    margin-top: 150px;
+
 }
 .btnLogin{
-    margin-bottom: 200px;
+    margin-bottom: 150px;
+    margin-top: 20px;
+}
+
+@media (min-width: 768px) {
+    form.iniciarSesion div.form-group { 
+        width: 50%;
+        margin: 0 auto;
+        margin-top: 10px;
+
+    }
+    
 }
