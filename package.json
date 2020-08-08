@@ -4,7 +4,7 @@
   "description": "Nombre: La Wineria\r Descripción breve: La Wineria es el lugar para encontrar las mejores bebidas par acompañar tus momentos únicos. Posee una selección de vinos, whiskys, y las mejores cervezas importadas. Esta dirigido al público que disfruta del buen beber!!!",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon ./src/app.js"
   },
   "repository": {
     "type": "git",
