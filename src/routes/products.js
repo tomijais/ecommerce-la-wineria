@@ -19,16 +19,18 @@ var storage = multer.diskStorage({
 
 // ************ Controller Require ************
 const productosController = require('../controllers/productosController');
+const adminMiddleware = require('../middlewares/adminMiddleware');
 
+//const adminMiddleware = require(path.join(__dirname, '../middlewares/adminMiddleware'))
 
-router.get('/producto/', productosController.productoAdmin); /* GET - Admin*/
-router.get('/producto/carga', productosController.productoCrear); /* GET - Admin Carga de productos */
-router.post('/producto/carga',upload.any(),productosController.productoGuardar);
+router.get('/producto/', adminMiddleware, productosController.productoAdmin); /* GET - Admin*/
+router.get('/producto/carga', adminMiddleware, productosController.productoCrear); /* GET - Admin Carga de productos */
+router.post('/producto/carga',adminMiddleware, upload.any(),productosController.productoGuardar);
 
-router.get('/index', productosController.productoIndex) /*ADMIN - muestra listado de productos*/
-router.get('/producto/edit/:id', productosController.editProduct) /*ADMIN - form para edicion de producto*/
-router.put('/producto/edit/:id', productosController.saveEditProduct) /*ADMIN - edicion producto por POST*/
-router.get('/producto/delete/:id', productosController.deleteProduct) /*ADMIN - form para edicion de producto*/
-router.delete('/producto/delete/:id', productosController.saveDeleteProduct) /*ADMIN - edicion producto por POST*/
+router.get('/index', adminMiddleware, productosController.productoIndex) /*ADMIN - muestra listado de productos*/
+router.get('/producto/edit/:id', adminMiddleware, productosController.editProduct) /*ADMIN - form para edicion de producto*/
+router.put('/producto/edit/:id', adminMiddleware, productosController.saveEditProduct) /*ADMIN - edicion producto por POST*/
+router.get('/producto/delete/:id', adminMiddleware, productosController.deleteProduct) /*ADMIN - form para edicion de producto*/
+router.delete('/producto/delete/:id', adminMiddleware, productosController.saveDeleteProduct) /*ADMIN - edicion producto por POST*/
 
 module.exports = router;

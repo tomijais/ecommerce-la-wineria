@@ -23,6 +23,10 @@ const controller = {
 		res.render('carrito', {
 			productos: productos
 		});
+	},
+	exit: (req, res) => {
+		req.session.destroy();
+		res.redirect('/')
 	}
 };
 
