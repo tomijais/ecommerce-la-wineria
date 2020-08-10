@@ -1,5 +1,5 @@
 function adminMiddleware(req, res, next) {
-    if(req.session.usuarioA) {
+    if(req.session.usuarioAdmin) {
         //console.log(req.session.usuario)
         next();
     } else {

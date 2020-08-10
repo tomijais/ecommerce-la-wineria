@@ -56,25 +56,31 @@
 					<h4 class="productos-similares">Productos similares</h4>
 					<div class="container">
 						<div class="row">
+							<% let productosArray = [] %> 
+							<% for (let i = 0; i < 4; i++) {
+								let numeroRandom = Math.floor(Math.random() * productos.length)
+								productosArray.push(numeroRandom)
+								
+							} %> 
 							<% for(let i=0; i< 4; i++) { %>
 								<div class="col-12 col-md-6 col-xl-3">
 									<section class="productos">
-										<a href="/producto/detalle/<%= productos[i].id %>">
+										<a href="/producto/detalle/<%= productos[productosArray[i]].id %>">
 											<figure class="">
-												<img class="img-fluid" src="/images/products/<%= productos[i].image %>"
-												alt="<%= productos[i].name %>"
+												<img class="img-fluid" src="/images/products/<%= productos[productosArray[i]].image %>"
+												alt="<%= productos[productosArray[i]].name %>"
 												/>
 											</figure>
 										</a>
 										
 										<article >
-											<a href="/producto/detalle/<%= productos[i].id %>" class="producto">
-												<h3 class="nombre-producto"><%= productos[i].name %></h3>
+											<a href="/producto/detalle/<%= productos[productosArray[i]].id %>" class="producto">
+												<h3 class="nombre-producto"><%= productos[productosArray[i]].name %></h3>
 											</a>
 											<div >
-												<a href="/producto/detalle/<%= productos[i].id %>" class="extras-producto">
-													<h4>$ <%= productos[i].price %></h4>
-													<span><%= productos[i].discount %> % OFF</span>
+												<a href="/producto/detalle/<%= productos[productosArray[i]].id %>" class="extras-producto">
+													<h4>$ <%= productos[productosArray[i]].price %></h4>
+													<span><%= productos[productosArray[i]].discount %> % OFF</span>
 												</a>
 											</div>
 										</article>

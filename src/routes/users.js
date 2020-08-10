@@ -8,6 +8,8 @@ const path = require('path');
 const loginValidations = require('../validations/loginValidation.js')
 const registerValidation = require('../validations/registerValidation.js')
 
+const userMiddlewareLoginRegister = require('../middlewares/userMiddlewareLoginRegister');
+
 
 // ************ Multer code ************
 let storage = multer.diskStorage({
@@ -26,12 +28,12 @@ const usersController = require('../controllers/usersController');
 
 router.get('/', usersController.index); //hacer vista del usuario
 
-router.get('/login', usersController.login); 
-router.post('/login',loginValidations, usersController.ingresar);
+router.get('/login',userMiddlewareLoginRegister, usersController.login); 
+router.post('/login',userMiddlewareLoginRegister,loginValidations, usersController.ingresar);
 
 
 
-router.get('/register', usersController.register);
-router.post('/register', upload.any(), usersController.saveUser);
+router.get('/register',userMiddlewareLoginRegister, usersController.register);
+router.post('/register',userMiddlewareLoginRegister, upload.any(), usersController.saveUser);
 
 module.exports = router;

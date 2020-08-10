@@ -24,13 +24,15 @@ let usersController = {
       .then(function(usuarios){
         for(let i = 0; i < usuarios.length; i++) {
             if(usuarios[i].email == req.body.email && bcrypt.compareSync(req.body.password, usuarios[i].password)) {
-              let usuarioALoguear = usuarios[i].email
+              let usuarioALoguear = usuarios[i]
               if(usuarios[i].category == 1) {
-                req.session.usuarioA = usuarioALoguear
+                req.session.usuarioAdmin = usuarioALoguear
               } else {
-                req.session.usuarioU = usuarioALoguear
+                req.session.usuario = usuarioALoguear
               }
-						    
+						    if(req.body.remember != undefined){
+                  res.cookie('remember', usuarios[i].id, { maxAge: 1000 * 60 * 60})
+                }
               return res.redirect('/')
             }
         }
@@ -62,7 +64,7 @@ let usersController = {
       email: req.body.email,
       password: bcrypt.hashSync(req.body.password, 10),
       category: 0,
-      image: req.files[0].image,
+      image: (req.files[0] != undefined) ? req.files[0].filename : "default-image.jpg",
       status: 1
     })
     .then(function(result){

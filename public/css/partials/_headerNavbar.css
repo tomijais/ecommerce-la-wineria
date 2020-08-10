@@ -55,7 +55,19 @@
   font-size: 20px;
 }
 
+.navegador-derecha li a{
+  font-size: 18px;
+}
+
 /*====== Media-Queries ======*/
+
+@media (max-width: 768px){
+  img.logo {
+    width: 25%;    
+  }
+}
+
+
 @media (min-width: 768px) and (max-width: 1099px) {
   .header {
     display: flex;
@@ -116,10 +128,12 @@
   }  
 
   .navegador-derecha li {
+    display: flex;
     margin-left: 10px;
     padding: 0;
     font-size: 20px;
   }
+
   .navegador-derecha a:hover {
     color: var(--light-blue);
   }
