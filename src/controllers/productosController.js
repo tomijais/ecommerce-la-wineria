@@ -45,7 +45,7 @@ const productosController = {
 		fs.writeFileSync(path.join(__dirname, '../data/productsDataBase.json'), JSON.stringify(productos));
 		res.redirect('/admin/producto');
 	},
-	productoIndex: (req,res, next) => {
+	productoAdminList: (req,res, next) => {
 		res.render('admin_index', {
 			productos: productos
 		})

@@ -18,8 +18,8 @@
         <input
         type="file"
         class="form-control-file"
-        id="exampleFormControlFile1"
-        name="producto"
+        id="image"
+        name="image"
         file="<%= elProducto.image %>"
         />
       </div>
@@ -29,9 +29,9 @@
           <label for="nombreProducto">Nombre Producto</label>
           <input
           type="text"
-          name="nombreProducto"
+          name="name"
           class="form-control"
-          id="nombreProducto"
+          id="name"
           aria-describedby="name"
           placeholder="Nombre Producto"
           required="required"
@@ -42,11 +42,11 @@
         <div class="formCarga required">
           <label for="anioProducto">Año Producto</label>
           <input
-          type="number"
-          name="anioProducto"
+          type="text"
+          name="year"
           class="form-control"
-          id="anioProducto"
-          aria-describedby="anio"
+          id="year"
+          aria-describedby="year"
           placeholder="Año Producto"
           required="required"
           value="<%= elProducto.year %>"
@@ -56,9 +56,9 @@
           <label for="bodegaProducto">Bodega</label>
           <input
           type="text"
-          name="bodegaProducto"
+          name="bodega"
           class="form-control"
-          id="bodegaProducto"
+          id="bodega"
           aria-describedby="bodega"
           placeholder="Bodega"
           required="required"
@@ -70,7 +70,7 @@
           <!-- /Header 
             <input type="text" name="tipoProducto" class="form-control" id="tipoProducto" aria-describedby="tipo">
           -->
-          <select class="form-control" name="tipoProducto" id="tipoProducto">
+          <select class="form-control" name="type" id="type">
             <option value="cerveza">Cerveza</option>
             <option value="vino">Vino</option>
             <option value="champagna">Espumante</option>
@@ -81,9 +81,9 @@
           <label for="regionProducto">Región</label>
           <input
           type="text"
-          name="regionProducto"
+          name="region"
           class="form-control"
-          id="regionProducto"
+          id="region"
           aria-describedby="region"
           placeholder="Región"
           required="required"
@@ -93,12 +93,12 @@
         <div class="formCarga required">
           <label for="graduacionProducto">Graduación alcoholica</label>
           <input
-          type="number"
+          type="text"
           min="1"
-          name="graduacionProducto"
+          name="alcohol"
           class="form-control"
-          id="graduacionProducto"
-          aria-describedby="graduacion"
+          id="alcohol"
+          aria-describedby="alcohol"
           placeholder="Graduación alcoholica"
           required="required"
           value="<%= elProducto.alcohol %>"
@@ -109,10 +109,10 @@
           <input
           type="number"
           min="1"
-          name="precioProducto"
+          name="price"
           class="form-control"
-          id="precioProducto"
-          aria-describedby="precio"
+          id="price"
+          aria-describedby="price"
           placeholder="Precio"
           required="required"
           value="<%= elProducto.price %>"
@@ -122,10 +122,10 @@
           <label for="descuentoProducto">Descuento</label>
           <input
           type="number"
-          name="descuentoProducto"
+          name="discount"
           class="form-control"
-          id="descuentoProducto"
-          aria-describedby="descuento"
+          id="discount"
+          aria-describedby="discount"
           placeholder="Descuento"
           required="required"
           value="<%= elProducto.discount %>"
@@ -134,10 +134,10 @@
         <div class="formCarga required">
           <label for="stockProducto">Stock</label>
           <input
-          type="number"
-          name="stockProducto"
+          type="text"
+          name="stock"
           class="form-control"
-          id="stockProducto"
+          id="stock"
           aria-describedby="stock"
           placeholder="Stock"
           required="required"
@@ -148,10 +148,10 @@
           <label for="descripcionProducto">Descripción</label>
           <input
           type="text"
-          name="descripcionProducto"
+          name="description"
           class="form-control"
-          id="descripcionProducto"
-          aria-describedby="descripcion"
+          id="description"
+          aria-describedby="description"
           placeholder="Descripción"
           required="required"
           value="<%= elProducto.description %>"

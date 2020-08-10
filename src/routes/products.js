@@ -23,11 +23,11 @@ const adminMiddleware = require('../middlewares/adminMiddleware');
 
 //const adminMiddleware = require(path.join(__dirname, '../middlewares/adminMiddleware'))
 
-router.get('/producto/', adminMiddleware, productosController.productoAdmin); /* GET - Admin*/
+router.get('/index', adminMiddleware, productosController.productoAdmin); /* GET - Admin*/
 router.get('/producto/carga', adminMiddleware, productosController.productoCrear); /* GET - Admin Carga de productos */
 router.post('/producto/carga',adminMiddleware, upload.any(),productosController.productoGuardar);
 
-router.get('/index', adminMiddleware, productosController.productoIndex) /*ADMIN - muestra listado de productos*/
+router.get('/productos', adminMiddleware, productosController.productoAdminList) /*ADMIN - muestra listado de productos*/
 router.get('/producto/edit/:id', adminMiddleware, productosController.editProduct) /*ADMIN - form para edicion de producto*/
 router.put('/producto/edit/:id', adminMiddleware, productosController.saveEditProduct) /*ADMIN - edicion producto por POST*/
 router.get('/producto/delete/:id', adminMiddleware, productosController.deleteProduct) /*ADMIN - form para edicion de producto*/
