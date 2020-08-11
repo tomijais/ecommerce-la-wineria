@@ -19,40 +19,40 @@ let usersController = {
   ingresar: (req, res, next) => {
     let errors = validationResult(req);
     if(errors.isEmpty()) {
-
+      
       db.User.findAll()
       .then(function(usuarios){
         for(let i = 0; i < usuarios.length; i++) {
-            if(usuarios[i].email == req.body.email && bcrypt.compareSync(req.body.password, usuarios[i].password)) {
-              let usuarioALoguear = usuarios[i]
-              if(usuarios[i].category == 1) {
-                req.session.usuarioAdmin = usuarioALoguear
-              } else {
-                req.session.usuario = usuarioALoguear
-              }
-						    if(req.body.remember != undefined){
-                  res.cookie('remember', usuarios[i].id, { maxAge: 1000 * 60 * 60})
-                }
-              return res.redirect('/')
+          if(usuarios[i].email == req.body.email && bcrypt.compareSync(req.body.password, usuarios[i].password)) {
+            let usuarioALoguear = usuarios[i]
+            if(usuarios[i].category == 1) {
+              req.session.usuarioAdmin = usuarioALoguear
+            } else {
+              req.session.usuario = usuarioALoguear
             }
+            if(req.body.remember != undefined){
+              res.cookie('remember', usuarios[i].id, { maxAge: 1000 * 60 * 60})
+            }
+            return res.redirect('/')
+          }
         }
         return res.render('login', {
-            errors: {
-                email: {
-                    msg: 'Credenciales inválidas. Inserta un email registrado y su respectiva contraseña'
-                }
-            },
-            old: req.body
+          errors: {
+            email: {
+              msg: 'Credenciales inválidas. Inserta un email registrado y su respectiva contraseña'
+            }
+          },
+          old: req.body
         })
       })
     } else {
-        res.render('login', {
-            errors: errors.mapped(),
-            old: req.body
-        })
+      res.render('login', {
+        errors: errors.mapped(),
+        old: req.body
+      })
     }
-  
-},
+    
+  },
   register: function(req, res, next) {
     res.render('registro');
   },
@@ -76,12 +76,38 @@ let usersController = {
       password: bcrypt.hashSync(req.body.userPassword, 10),
       avatar: req.files[0].filename
     }
-
+    
     usuarios.push(nuevoUsuario)
     fs.writeFileSync(path.join(__dirname, '../data/usuarios.json'), JSON.stringify(usuarios))
     
     res.redirect('/')*/
+  },
+  accountEdit: function(req, res, next){
+    db.User.findByPk(req.params.id)
+      .then(function(myUser){
+        res.render('accountEdit', {myUser:myUser})
+      })
+  },
+  accountEditSave: function(req, res){
+    db.Usuario.update({
+      first_name: req.body.first_name,
+      last_name: req.body.last_name,
+      email: req.body.email,
+      password: bcrypt.hashSync(req.body.password, 10),
+      category: 0,      
+      image: (req.files[0] != undefined) ? req.files[0].filename : "default-image.jpg",
+      status: 1
+    },
+    {
+      where: {
+        id: req.params.id
+      }
+    })
+    .then(function() {
+      res.redirect('/');
+    });
   }
+    
 }
 
 module.exports = usersController;

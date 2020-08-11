@@ -21,7 +21,15 @@
 			<ul class="navegador-derecha">
 				<li><a href="#"><i class="fas fa-search"></i></a></li>
 				<li><a href="/carrito"><i class="fas fa-shopping-basket"></i></a></li>
-				<li><a href="/users/login">Login</a><a href="/users/register">Registrarse</a></li>
+				<li class="dropdown">
+					<a class="btn btn-sm dropdown-toggle dropdown-toggle-split" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-users"></i></a>
+					<div class="dropdown-menu">
+						<a class="dropdown-item" href="/users/register">Registrate</a>
+						<a class="dropdown-item" href="/users/login">Login</a>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item" href="/users/account/:id">Tu cuenta</a>
+					</div>
+				</li>
 				<li><a href="/exit" class=""><i class="fas fa-sign-out-alt"></i></a></li>
 				<li><a href="/admin/index"><i class="fas fa-edit"></i></a></li>
 			</ul>

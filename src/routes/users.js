@@ -36,4 +36,9 @@ router.post('/login',userMiddlewareLoginRegister,loginValidations, usersControll
 router.get('/register',userMiddlewareLoginRegister, usersController.register);
 router.post('/register',userMiddlewareLoginRegister, upload.any(), usersController.saveUser);
 
+
+router.get('/account/:id', usersController.accountEdit);
+router.post('/account/:id', upload.any(), usersController.accountEditSave);
+
+
 module.exports = router;
