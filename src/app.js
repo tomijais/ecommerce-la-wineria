@@ -28,7 +28,6 @@ app.use(methodOverride("_method")); // Pasar poder pisar el method="POST" en el 
 
 app.use(function(req, res, next) {
   res.locals.user = req.session.user;
-  res.locals.admin = req.session.admin;
   next();
 });
 

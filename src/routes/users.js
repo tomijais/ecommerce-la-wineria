@@ -9,6 +9,7 @@ const loginValidations = require('../validations/loginValidation.js')
 const registerValidation = require('../validations/registerValidation.js')
 
 const userMiddlewareLoginRegister = require('../middlewares/userMiddlewareLoginRegister');
+const usersMiddleware = require('../middlewares/userMiddleware')
 
 
 // ************ Multer code ************
@@ -37,8 +38,8 @@ router.get('/register',userMiddlewareLoginRegister, usersController.register);
 router.post('/register',userMiddlewareLoginRegister, upload.any(), usersController.saveUser);
 
 
-router.get('/account/:id', usersController.accountEdit);
-router.post('/account/:id', upload.any(), usersController.accountEditSave);
+router.get('/account/:id',usersMiddleware,usersController.accountEdit);
+router.post('/account/:id',usersMiddleware,loginValidations, upload.any(), usersController.accountEditSave);
 
 
 module.exports = router;

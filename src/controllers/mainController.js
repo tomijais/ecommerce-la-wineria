@@ -5,8 +5,10 @@ const productos = JSON.parse(fs.readFileSync(productosFilePath, 'utf-8'));
 
 const controller = {
 	index: (req, res) => {
+
 		res.render('index', {
-			productos: productos
+			productos: productos,
+			user: (req.session.user ? req.session.user : "")
 		});
 	},
 	productoDetalle: (req, res) => {
