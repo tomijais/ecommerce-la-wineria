@@ -1,38 +1,58 @@
-<nav class="navbar fixed-top navbar-light bg-light">	
-	<header class="header">
-		<div class="contenedor">
-			<a href="/" class="">
-				<img class="logo" src="/images/Logo1.png">
-			</a>
-		</div>
-		<button class="btn-toggle-navbar">
-			<i class="fas fa-bars"></i>
-		</button>
-		
-		<nav class="navegador">
-			<ul class="navegador-central">
-				<li><a href="#">Cervezas</a></li>
-				<li><a href="#">Vinos</a></li>
-				<li><a href="#">Whiskies</a></li>
-				<li><a href="#">Promociones</a></li>
-			</ul>
-		</nav>
-		<nav class="navegador">
-			<ul class="navegador-derecha">
-				<li><a href="#"><i class="fas fa-search"></i></a></li>
-				<li><a href="/carrito"><i class="fas fa-shopping-basket"></i></a></li>
-				<li class="dropdown">
-					<a class="btn btn-sm dropdown-toggle dropdown-toggle-split" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-users"></i></a>
-					<div class="dropdown-menu">
-						<a class="dropdown-item" href="/users/register">Registrate</a>
-						<a class="dropdown-item" href="/users/login">Login</a>
-						<div class="dropdown-divider"></div>
-						<a class="dropdown-item" href="/users/account/:id">Tu cuenta</a>
-					</div>
-				</li>
-				<li><a href="/exit" class=""><i class="fas fa-sign-out-alt"></i></a></li>
-				<li><a href="/admin/index"><i class="fas fa-edit"></i></a></li>
-			</ul>
-		</nav>
-	</header>	
+<nav class="navbar fixed-top navbar-light bg-light">
+  <header class="header">
+    <div class="contenedor">
+      <a href="/" class="">
+        <img class="logo" src="/images/Logo1.png" />
+      </a>
+    </div>
+    <button class="btn-toggle-navbar">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <nav class="navegador">
+      <ul class="navegador-central">
+        <li><a href="#">Cervezas</a></li>
+        <li><a href="#">Vinos</a></li>
+        <li><a href="#">Whiskies</a></li>
+        <li><a href="#">Promociones</a></li>
+      </ul>
+    </nav>
+    <nav class="navegador">
+      <ul class="navegador-derecha">
+        <li>
+          <a href="#"><i class="fas fa-search"></i></a>
+        </li>
+        <li>
+          <a href="/carrito"><i class="fas fa-shopping-basket"></i></a>
+        </li>
+        <li class="dropdown">
+          <a
+            class="btn btn-sm dropdown-toggle dropdown-toggle-split"
+            role="button"
+            id="dropdownMenuLink"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+            ><i class="fas fa-users"></i
+          ></a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="/users/register">Registrate</a>
+            <a class="dropdown-item" href="/users/login">Login</a>
+            <div class="dropdown-divider"></div>
+            <a
+              class="dropdown-item"
+              href="/users/account/"
+              >Tu cuenta</a
+            >
+          </div>
+        </li>
+        <li>
+          <a href="/exit" class=""><i class="fas fa-sign-out-alt"></i></a>
+        </li>
+        <li>
+          <a href="/admin/index"><i class="fas fa-edit"></i></a>
+        </li>
+      </ul>
+    </nav>
+  </header>
 </nav>

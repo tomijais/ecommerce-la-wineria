@@ -1,8 +1,5 @@
 function userMiddleware(req, res, next) {
-    if(req.session.usuario) {
-        //console.log(req.session.usuario)
-        next();
-    } else if(req.session.usuarioAdmin){
+    if(req.session.user) {
         next();
     } else {
         res.redirect('/')

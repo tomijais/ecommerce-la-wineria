@@ -10,18 +10,18 @@
 		<div class="row">
 			<div class="info-usuario">
 				<h1>Datos Personales</h1>				
-				<form action="/users/account/<%= myUser.id %>" method="post" enctype="multipart/form-data">
+				<form action="/users/account/<%= user.id %>" method="post" enctype="multipart/form-data">
 					<div class="form-group required">
 						<label for="first_name">Nombre</label>
-						<input type="text" name="first_name" class="form-control" id="first_name" required="required" width= "100vw" value=<%= myUser.first_name %>>
+						<input type="text" name="first_name" class="form-control" id="first_name" required="required" width= "100vw" value=<%= user.first_name %>>
 
 						<label for="last_name">Apellido</label>
-						<input type="text" name="last_name" class="form-control" id="last_name" required="required" width= "100vw" value=<%= myUser.last_name%>>
+						<input type="text" name="last_name" class="form-control" id="last_name" required="required" width= "100vw" value=<%= user.last_name%>>
 					</div>
 					
 					<div class="form-group required">
 						<label for="email">Email</label>
-						<input type="text" value=<%= myUser.email %> name="email" class="form-control" id="email" aria-describedby="emailHelp">
+						<input type="text" value=<%= user.email %> name="email" class="form-control" id="email" aria-describedby="emailHelp">
 						<small class="text-danger"><%= (typeof errors != 'undefined' && errors.email) ? errors.email.msg : '' %></small>
 
 

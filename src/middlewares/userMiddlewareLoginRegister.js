@@ -1,7 +1,5 @@
 function userMiddleware(req, res, next) {
-  if (req.session.usuario) {
-    res.redirect("/");
-  } else if (req.session.usuarioAdmin) {
+  if (req.session.user) {
     res.redirect("/");
   } else {
     next();

@@ -25,6 +25,13 @@ app.use(rememberCookie);
 
 app.use(methodOverride("_method")); // Pasar poder pisar el method="POST" en el formulario por PUT y DELETE
 
+
+app.use(function(req, res, next) {
+  res.locals.user = req.session.user;
+  res.locals.admin = req.session.admin;
+  next();
+});
+
 // ************ Template Engine - (No tocar) ************
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "/views")); // Define la ubicación de la carpeta de las Vistas
