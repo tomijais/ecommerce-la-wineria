@@ -68,16 +68,24 @@
           <!-- /Header 
             <input type="text" name="tipoProducto" class="form-control" id="tipoProducto" aria-describedby="tipo">
           -->
-          <select class="form-control" name="type" id="type">
-            <option value="cerveza">Cerveza</option>
-            <option value="vino">Vino</option>
-            <option value="champagna">Espumante</option>
-            <option value="whisky">Whisky</option>
+          <select class="form-control" name="type" id="type" type="number">
+            <option value="3">Cerveza</option>
+            <option value="1">Vino</option>
+            <option value="4">Espumante</option>
+            <option value="2">Whisky</option>
           </select>
         </div>
         <div class="formCarga required">
           <label for="regionProducto">Región</label>
-          <input
+          <select class="form-control" name="region" id="region" type="number">
+            <option value="1">Mendoza</option>
+            <option value="2">San Juan</option>
+            <option value="3">Cordoba</option>
+            <option value="4">Argentina</option>
+            <option value="5">Chile</option>
+          </select>
+          
+          <!--<input
           type="text"
           name="region"
           class="form-control"
@@ -85,7 +93,7 @@
           aria-describedby="region"
           placeholder="Región"
           required="required"
-          />
+          />-->
         </div>
         <div class="formCarga required">
           <label for="graduacionProducto">Graduación alcoholica</label>
