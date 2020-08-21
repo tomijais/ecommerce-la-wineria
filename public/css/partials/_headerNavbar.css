@@ -25,15 +25,29 @@
   padding: 0 0;
 }
 
-.btn-toggle-navbar {
+.menu-mobile{
   background-color: var(--dark-blue);
-  color: #ffffff;
-  font-size: 1.5em;
+  color: white;
+}
+
+.menu-desplegado {
+  left: 20vw;
+}
+
+div.buscador {
+  margin: 1px 3px;
+}
+
+input.input-buscador{
   border: none;
-  border-radius: 4px;
-  padding: 5px 15px;
-  display: block;
-  margin: 20px auto 0;
+  padding: 6px;
+}
+
+button.button-buscador {
+  margin-left: 3px;
+  color: #666;
+  background-color: white;
+  border: none;
 }
 
 .navegador {
@@ -89,7 +103,7 @@
     width: 40%;    
   }
   
-  .btn-toggle-navbar {
+  .menu-mobile {
     display: none;
   }
   
@@ -182,7 +196,7 @@
     margin-right: 6px;
   }
   
-  .btn-toggle-navbar {
+  .menu-mobile {
     display: none;
   }
     

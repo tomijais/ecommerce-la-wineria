@@ -5,10 +5,25 @@
         <img class="logo" src="/images/Logo1.png" />
       </a>
     </div>
-    <button class="btn-toggle-navbar">
-      <i class="fas fa-bars"></i>
-    </button>
-
+    
+    
+    <div class="dropdown">
+      <a class="btn dropdown-toggle menu-mobile" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <i class="fas fa-bars"></i> Menu
+      </a>
+      <div class="dropdown-menu menu-desplegado" aria-labelledby="dropdownMenuButton">
+        <div class="buscador">
+          <input type="text" class="input-buscador" placeholder="¿Qué buscas?">
+          <button type="submit" class="button-buscador"><i class="fas fa-search"></i></button>
+        </div>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#">Cervezas</a>
+        <a class="dropdown-item" href="#">Vinos</a>
+        <a class="dropdown-item" href="#">Whiskies</a>
+        <a class="dropdown-item" href="#">Promociones</a>
+      </div>
+    </div>
+    
     <nav class="navegador">
       <ul class="navegador-central">
         <li><a href="#">Cervezas</a></li>
@@ -27,32 +42,33 @@
         </li>
         <li class="dropdown">
           <a
-            class="btn btn-sm dropdown-toggle dropdown-toggle-split"
-            role="button"
-            id="dropdownMenuLink"
-            data-toggle="dropdown"
-            aria-haspopup="true"
-            aria-expanded="false"
-            ><i class="fas fa-users"></i
-          ></a>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="/users/register">Registrate</a>
-            <a class="dropdown-item" href="/users/login">Login</a>
-            <div class="dropdown-divider"></div>
-            <a
+          class="btn btn-sm dropdown-toggle dropdown-toggle-split"
+          role="button"
+          id="dropdownMenuLink"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+          ><i class="fas fa-users"></i
+            ></a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="/users/register">Registrate</a>
+              <a class="dropdown-item" href="/users/login">Login</a>
+              <div class="dropdown-divider"></div>
+              <a
               class="dropdown-item"
               href="/users/account/<%=(user ? user.id :":id" )%> "
               >Tu cuenta</a
-            >
-          </div>
-        </li>
-        <li>
-          <a href="/exit" class=""><i class="fas fa-sign-out-alt"></i></a>
-        </li>
-        <li>
-          <a href="/admin/index"><i class="fas fa-edit"></i></a>
-        </li>
-      </ul>
-    </nav>
-  </header>
-</nav>
+              >
+            </div>
+          </li>
+          <li>
+            <a href="/exit" class=""><i class="fas fa-sign-out-alt"></i></a>
+          </li>
+          <li>
+            <a href="/admin/index"><i class="fas fa-edit"></i></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+  </nav>
+  
