@@ -4,26 +4,16 @@ const multer = require("multer");
 let db = require("../database/models");
 const { Op } = require("sequelize");
 const Product = require("../database/models/Product");
-
-const productosFilePath = path.join(__dirname, "../data/productsDataBase.json");
-const productos = JSON.parse(fs.readFileSync(productosFilePath, "utf-8"));
-
-let ultimoId = function (array) {
-  let contador = array[0].id;
-  for (let i = 0; i < array.length; i++) {
-    if (array[i].id > contador) {
-      contador = array[i].id;
-    }
-  }
-  return contador;
-};
+const Type = require("../database/models/Type");
+const Region = require("../database/models/Region");
 
 const productosController = {
-  productoAdmin: (req, res) => {
+  productoAdmin: (req, res, next) => {
     db.Product.findAll({
       include: [{ association: "regions" }, { association: "types" }],
       where: {
         status: 1,
+        stock: { [Op.gt]: 0 },
       },
       order: [["id", "ASC"]],
     }).then(function (result) {
@@ -32,7 +22,7 @@ const productosController = {
       });
     });
   },
-  productoCrear: (req, res) => {
+  productoCrear: (req, res, next) => {
     db.Product.findAll({
       include: [{ association: "regions" }, { association: "types" }],
       where: {
@@ -79,79 +69,78 @@ const productosController = {
     });
   },
   editProduct: function (req, res, next) {
-
-	db.Product.findByPk(req.params.id)
-	.then(function (product){
-		res.render("producto_edit", {
-          elProducto: product,
-        }
-		)})
+    db.Product.findByPk(req.params.id, {
+      include: [{ association: "types" }, { association: "regions" }],
+    }).then(function (product) {
+      res.render("producto_edit", {
+        elProducto: product,
+      });
+    });
   },
   saveEditProduct: function (req, res, next) {
-
-if( req.files[0] != undefined){
-    db.Product.update({
-		name: req.body.name,
-		year: req.body.year,
-		bodega: req.body.bodega,
-		type_id: req.body.type,
-		region_id: req.body.region,
-		alcohol: req.body.alcohol,
-		description: req.body.description,
-		price: req.body.price,
-		discount: req.body.discount,
-		image: req.files[0].filename,
-		stock: req.body.stock,
-		status: 1,
-	  },{
-		  where:{
-			  id: req.params.id
-		  }
-	  })
-}else{
-	db.Product.update({
-		name: req.body.name,
-		year: req.body.year,
-		bodega: req.body.bodega,
-		type_id: req.body.type,
-		region_id: req.body.region,
-		alcohol: req.body.alcohol,
-		description: req.body.description,
-		price: req.body.price,
-		discount: req.body.discount,
-		stock: req.body.stock,
-		status: 1,
-	  },{
-		  where:{
-			  id: req.params.id
-		  }
-	  })
-}
-
-
-
-
-
-  },
-  deleteProduct: function (req, res, next) {
-    for (let i = 0; i < productos.length; i++) {
-      if (productos[i].id == req.params.id) {
-        res.render("producto_delete", { elProducto: productos[i] });
-      }
+    if (req.files != undefined) {
+      db.Product.update(
+        {
+          name: req.body.name,
+          year: req.body.year,
+          bodega: req.body.bodega,
+          type_id: req.body.type,
+          region_id: req.body.region,
+          alcohol: req.body.alcohol,
+          description: req.body.description,
+          price: req.body.price,
+          discount: req.body.discount,
+          image: req.files[0].filename,
+          stock: req.body.stock,
+        },
+        {
+          where: {
+            id: req.params.id,
+          },
+        }
+      )
+    } else {
+      db.Product.update(
+        {
+          name: req.body.name,
+          year: req.body.year,
+          bodega: req.body.bodega,
+          type_id: req.body.type,
+          region_id: req.body.region,
+          alcohol: req.body.alcohol,
+          description: req.body.description,
+          price: req.body.price,
+          discount: req.body.discount,
+          stock: req.body.stock,
+        },
+        {
+          where: {
+            id: req.params.id
+          },
+        }
+      )
     }
   },
-  saveDeleteProduct: function (req, res) {
-    let idProductoEliminar = req.params.id;
-    let productosNuevos = productos.filter(function (elemento) {
-      return elemento.id != idProductoEliminar;
+  deleteProduct: function (req, res, next) {
+    db.Product.findByPk(req.params.id).then(function (product) {
+      res.render("producto_delete", {
+        elProducto: product,
+      });
     });
-    fs.writeFileSync(
-      path.join(__dirname, "../data/productsDataBase.json"),
-      JSON.stringify(productosNuevos)
+  },
+
+  saveDeleteProduct: function (req, res, next) {
+    db.Product.update(
+      {
+        status: 0,
+      },
+      {
+        where: {
+          id: req.params.id,
+        },
+      }
     );
-    res.render("admin_index", {
-      productos: productosNuevos,
-    });
+    res.redirect("/admin/productos");
   },
 };
 

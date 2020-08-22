@@ -65,18 +65,22 @@
           value="<%= elProducto.bodega %>"
           />
         </div>
+
+
+
+
+
+
         <div class="formCarga required">
           <label for="tipoProducto">Tipo Producto</label>
-          <!-- /Header 
-            <input type="text" name="tipoProducto" class="form-control" id="tipoProducto" aria-describedby="tipo">
-          -->
           <select class="form-control" name="type" id="type">
-            <option value="cerveza">Cerveza</option>
-            <option value="vino">Vino</option>
-            <option value="champagna">Espumante</option>
-            <option value="whisky">Whisky</option>
+            <option value="Cerveza"  <%= elProducto.types.name == 'Cerveza' ? 'selected' : ''%>          >Cerveza</option>
+            <option value="Vino"     <%= elProducto.types.name == 'Vino' ? 'selected' : ''%>       >Vino</option>
+            <option value="Champagna" <%= elProducto.types.name == 'Champagna' ? 'selected' : ''%>           >Espumante</option>
+            <option value="Whisky"    <%= elProducto.types.name == 'Whisky' ? 'selected' : ''%>        >Whisky</option>
           </select>
         </div>
+
         <div class="formCarga required">
           <label for="regionProducto">Región</label>
           <input
@@ -87,7 +91,7 @@
           aria-describedby="region"
           placeholder="Región"
           required="required"
-          value="<%= elProducto.region %>"
+          value="<%= elProducto.regions.name %>"
           />
         </div>
         <div class="formCarga required">

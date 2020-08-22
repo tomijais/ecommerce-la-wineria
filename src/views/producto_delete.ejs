@@ -1,170 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- Include Head -->
-<%- include('partials/head', {title: 'Admin | Editar producto'}) %>
-<body>
-  <!-- Header -->
-  <%- include('partials/headerNavbar') %>
-  <!-- /Header -->
-  
-  <h4 class="titCargaProd">Estás editando el producto de nombre "<%= elProducto.name %>"" y id "<%= elProducto.id %>"" </h4>
-  
-  <div class="contenedorCarga">
-    <form method="POST" action="/admin/producto/delete/<%= elProducto.id %>?_method=delete">
-      <div class="cargaIzq">
-        <section class="cargaImgProd">
-          <img src="" alt="" />
-        </section>
-        <input
-        type="file"
-        class="form-control-file"
-        id="exampleFormControlFile1"
-        name="producto"
-        file="<%= elProducto.image %>"
-        />
-      </div>
-      
-      <div class="cargaDer">
-        <div class="formCarga required">
-          <label for="nombreProducto">Nombre Producto</label>
+  <!-- Include Head -->
+  <%- include('partials/head', {title: 'Admin | Editar producto'}) %>
+  <body>
+    <!-- Header -->
+    <%- include('partials/headerNavbar') %>
+    <!-- /Header -->
+
+    <h4 class="titCargaProd">
+      Estás eliminando el producto de nombre "<%= elProducto.name %>"" y id "<%=
+      elProducto.id %>""
+    </h4>
+
+    <div class="contenedorCarga">
+      <form
+        method="POST"
+        action="/admin/producto/delete/<%= elProducto.id %>?_method=delete"
+      >
+        <div class="cargaIzq">
+          <section class="cargaImgProd">
+            <img src="" alt="" />
+          </section>
           <input
-          type="text"
-          name="nombreProducto"
-          class="form-control"
-          id="nombreProducto"
-          aria-describedby="name"
-          placeholder="Nombre Producto"
-          
-          value="<%= elProducto.name %>"
+            type="file"
+            class="form-control-file"
+            id="exampleFormControlFile1"
+            name="producto"
+            file="<%= elProducto.image %>"
+            disabled
           />
         </div>
-        
-        <div class="formCarga required">
-          <label for="anioProducto">Año Producto</label>
-          <input
-          type="number"
-          name="anioProducto"
-          class="form-control"
-          id="anioProducto"
-          aria-describedby="anio"
-          placeholder="Año Producto"
-          
-          value="<%= elProducto.year %>"
-          />
+
+        <div class="cargaDer">
+          <div class="formCarga required">
+            <label for="nombreProducto">Nombre Producto</label>
+            <input
+              type="text"
+              name="nombreProducto"
+              class="form-control"
+              id="nombreProducto"
+              aria-describedby="name"
+              placeholder="Nombre Producto"
+              value="<%= elProducto.name %>"
+              disabled
+            />
+          </div>
+
+          <div class="formCarga required">
+            <label for="anioProducto">Año Producto</label>
+            <input
+              type="number"
+              name="anioProducto"
+              class="form-control"
+              id="anioProducto"
+              aria-describedby="anio"
+              placeholder="Año Producto"
+              value="<%= elProducto.year %>"
+              disabled
+            />
+          </div>
+          <div class="formCarga required">
+            <label for="bodegaProducto">Bodega</label>
+            <input
+              type="text"
+              name="bodegaProducto"
+              class="form-control"
+              id="bodegaProducto"
+              aria-describedby="bodega"
+              placeholder="Bodega"
+              value="<%= elProducto.bodega %>"
+              disabled
+            />
+          </div>
+          <div class="formCarga required">
+            <label for="tipoProducto">Tipo Producto</label>
+            <select class="form-control" name="tipoProducto" id="tipoProducto" disabled>
+              <option value="cerveza">Cerveza</option>
+              <option value="vino">Vino</option>
+              <option value="champagna">Espumante</option>
+              <option value="whisky">Whisky</option>
+            </select>
+          </div>
+          <div class="formCarga required">
+            <label for="regionProducto">Región</label>
+            <input
+              type="text"
+              name="regionProducto"
+              class="form-control"
+              id="regionProducto"
+              aria-describedby="region"
+              placeholder="Región"
+              value="<%= elProducto.region %>"
+              disabled
+            />
+          </div>
+          <div class="formCarga required">
+            <label for="graduacionProducto">Graduación alcoholica</label>
+            <input
+              type="number"
+              min="1"
+              name="graduacionProducto"
+              class="form-control"
+              id="graduacionProducto"
+              aria-describedby="graduacion"
+              placeholder="Graduación alcoholica"
+              value="<%= elProducto.alcohol %>"
+              disabled
+            />
+          </div>
+          <div class="formCarga required">
+            <label for="precioProducto">Precio</label>
+            <input
+              type="number"
+              min="1"
+              name="precioProducto"
+              class="form-control"
+              id="precioProducto"
+              aria-describedby="precio"
+              placeholder="Precio"
+              value="<%= elProducto.price %>"
+              disabled
+            />
+          </div>
+          <div class="formCarga required">
+            <label for="descuentoProducto">Descuento</label>
+            <input
+              type="number"
+              name="descuentoProducto"
+              class="form-control"
+              id="descuentoProducto"
+              aria-describedby="descuento"
+              placeholder="Descuento"
+              value="<%= elProducto.discount %>"
+              disabled
+            />
+          </div>
+          <div class="formCarga required">
+            <label for="stockProducto">Stock</label>
+            <input
+              type="number"
+              name="stockProducto"
+              class="form-control"
+              id="stockProducto"
+              aria-describedby="stock"
+              placeholder="Stock"
+              value="<%= elProducto.stock %>"
+              disabled
+            />
+          </div>
+          <div class="formCarga required">
+            <label for="descripcionProducto">Descripción</label>
+            <input
+              type="text"
+              name="descripcionProducto"
+              class="form-control"
+              id="descripcionProducto"
+              aria-describedby="descripcion"
+              placeholder="Descripción"
+              value="<%= elProducto.description %>"
+              disabled
+              />
+          </div>
+          <br />
+          <button type="submit" class="btn btn-success">
+            Eliminar Producto
+          </button>
         </div>
-        <div class="formCarga required">
-          <label for="bodegaProducto">Bodega</label>
-          <input
-          type="text"
-          name="bodegaProducto"
-          class="form-control"
-          id="bodegaProducto"
-          aria-describedby="bodega"
-          placeholder="Bodega"
-          
-          value="<%= elProducto.bodega %>"
-          />
-        </div>
-        <div class="formCarga required">
-          <label for="tipoProducto">Tipo Producto</label>
-          <!-- /Header 
-            <input type="text" name="tipoProducto" class="form-control" id="tipoProducto" aria-describedby="tipo">
-          -->
-          <select class="form-control" name="tipoProducto" id="tipoProducto">
-            <option value="cerveza">Cerveza</option>
-            <option value="vino">Vino</option>
-            <option value="champagna">Espumante</option>
-            <option value="whisky">Whisky</option>
-          </select>
-        </div>
-        <div class="formCarga required">
-          <label for="regionProducto">Región</label>
-          <input
-          type="text"
-          name="regionProducto"
-          class="form-control"
-          id="regionProducto"
-          aria-describedby="region"
-          placeholder="Región"
-          
-          value="<%= elProducto.region %>"
-          />
-        </div>
-        <div class="formCarga required">
-          <label for="graduacionProducto">Graduación alcoholica</label>
-          <input
-          type="number"
-          min="1"
-          name="graduacionProducto"
-          class="form-control"
-          id="graduacionProducto"
-          aria-describedby="graduacion"
-          placeholder="Graduación alcoholica"
-          
-          value="<%= elProducto.alcohol %>"
-          />
-        </div>
-        <div class="formCarga required">
-          <label for="precioProducto">Precio</label>
-          <input
-          type="number"
-          min="1"
-          name="precioProducto"
-          class="form-control"
-          id="precioProducto"
-          aria-describedby="precio"
-          placeholder="Precio"
-          
-          value="<%= elProducto.price %>"
-          />
-        </div>
-        <div class="formCarga required">
-          <label for="descuentoProducto">Descuento</label>
-          <input
-          type="number"
-          name="descuentoProducto"
-          class="form-control"
-          id="descuentoProducto"
-          aria-describedby="descuento"
-          placeholder="Descuento"
-          
-          value="<%= elProducto.discount %>"
-          />
-        </div>
-        <div class="formCarga required">
-          <label for="stockProducto">Stock</label>
-          <input
-          type="number"
-          name="stockProducto"
-          class="form-control"
-          id="stockProducto"
-          aria-describedby="stock"
-          placeholder="Stock"
-          
-          value="<%= elProducto.stock %>"
-          />
-        </div>
-        <div class="formCarga required">
-          <label for="descripcionProducto">Descripción</label>
-          <input
-          type="text"
-          name="descripcionProducto"
-          class="form-control"
-          id="descripcionProducto"
-          aria-describedby="descripcion"
-          placeholder="Descripción"
-          
-          value="<%= elProducto.description %>"
-          />
-        </div>
-        <br/>
-          <button type="submit" class="btn btn-success">Eliminar Producto</button>
-      </div>
-    </form>    
-  </div>
-  <br />
-  <!-- footer -->
-  <%- include('partials/footer') %>
-  <!-- /footer -->
-</body>
+      </form>
+    </div>
+    <br />
+    <!-- footer -->
+    <%- include('partials/footer') %>
+    <!-- /footer -->
+  </body>
 </html>
