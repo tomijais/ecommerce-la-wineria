@@ -8,8 +8,8 @@
     <!-- /Header -->
 
     <h4 class="titCargaProd">
-      Estás eliminando el producto de nombre "<%= elProducto.name %>"" y id "<%=
-      elProducto.id %>""
+      Estás eliminando el producto <%= elProducto.name %> con el id <%=
+      elProducto.id %>
     </h4>
 
     <div class="contenedorCarga">
@@ -19,8 +19,9 @@
       >
         <div class="cargaIzq">
           <section class="cargaImgProd">
-            <img src="" alt="" />
+            <img src="/images/products/<%= elProducto.image %>" alt="" />
           </section>
+          <span>Imagen Actual <%= elProducto.image %></span>
           <input
             type="file"
             class="form-control-file"

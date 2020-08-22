@@ -33,4 +33,8 @@ router.put('/producto/edit/:id', adminMiddleware, productosController.saveEditPr
 router.get('/producto/delete/:id', adminMiddleware, productosController.deleteProduct) /*ADMIN - form para edicion de producto*/
 router.delete('/producto/delete/:id', adminMiddleware, productosController.saveDeleteProduct) /*ADMIN - edicion producto por POST*/
 
+router.get('/producto/eliminados',adminMiddleware,productosController.verEliminados);
+router.put('/producto/eliminados/:id',adminMiddleware,productosController.recuperarEliminados);
+
+
 module.exports = router;

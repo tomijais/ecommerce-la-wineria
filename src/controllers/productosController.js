@@ -177,6 +177,32 @@ const productosController = {
     );
     res.redirect("/admin/productos");
   },
+  verEliminados: (req, res, next) => {
+    db.Product.findAll({
+      include: [{ association: "regions" }, { association: "types" }],
+      where: {
+        status: 0,
+      },
+      order: [["id", "ASC"]],
+    }).then(function (result) {
+      res.render("producto_recuperar", {
+        productos: result,
+      });
+    });
+  },
+  recuperarEliminados: (req, res, next) => {
+  db.Product.update(
+    {
+      status: 1,
+    },
+    {
+      where: {
+        id: req.params.id,
+      },
+    }
+  );
+  res.redirect("/admin/productos");
+  }
 };
 
 module.exports = productosController;

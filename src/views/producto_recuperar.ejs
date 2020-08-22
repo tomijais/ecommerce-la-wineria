@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- Include Head -->
+<%- include('partials/head', {title: 'Listado productos'}) %>
+<body>
+  <!-- Header -->
+  <%- include('partials/headerNavbar') %>
+  <!-- /Header -->
+  
+  <!-- Banner -->
+  <%- include('partials/banner') %>
+  <!-- /Banner -->
+  <br />
+  
+  
+  <!-- Nuestros Productos -->
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h2 class="productos-titulo">Listado de productos Eliminados</h2>
+      </div>
+    </div>
+    <!-- Mostrar productos -->
+    <div class="container">
+      <div class="row">
+        <% for(let i = 0; i < productos.length; i++) { %>
+          <div class="col-12 col-md-6 col-xl-3">
+            <section class="productos">
+              <a href="producto/edit/<%= productos[i].id %>">
+                <figure class="">
+                  <img class="img-fluid" src="/images/products/<%= productos[i].image %>"
+                  alt="<%= productos[i].name %>"
+                  />
+                </figure>
+              </a>
+              
+              <article >
+                <a href="producto/edit/<%= productos[i].id %>" class="producto">
+                  <h3 class="nombre-producto"><%= productos[i].name %></h3>
+                </a>
+                <div >
+                  <a href="producto/edit/<%= productos[i].id %>" class="extras-producto">
+                    <h4>$ <%= productos[i].price %></h4>
+                    <span><%= productos[i].discount %> % OFF</span>
+                  </a>
+                </div>
+              </article>
+              
+              <a href="edit/<%= productos[i].id %>">
+                <button type="button" class="btn btn-success btn-lg btn-block">
+                  Editar Producto
+                </button>
+              </a>
+              <br>
+              <form action="/admin/producto/eliminados/<%= productos[i].id %>?_method=put" method="POST">
+              <a href="">
+                <button type="submit" class="btn btn-success btn-lg btn-block">
+                  Recuperar Producto
+                </button>
+              </a>
+              </form>
+            </section>
+          </div>
+          <% } %>
+        </div>
+      </div>
+    </div>
+    <!-- /ultima visita -->
+    
+    <!-- footer -->
+    <%- include('partials/footer') %>
+    <!-- /footer -->
+  </body>
+  </html>
+  
