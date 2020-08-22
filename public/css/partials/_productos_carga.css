@@ -51,9 +51,12 @@ h5.info-home {
         width: 70%;
         margin-right: 10%;
         margin-left: 10%;
-        height: 250px;
+        height: 70%;
         border: 2px solid grey;
         
+    }
+    div.cargaIzq span {
+        margin-left: 10%;
     }
     div.contenedorCarga form div.cargaIzq input {
         margin-right: 10%;
@@ -126,9 +129,12 @@ h5.info-home {
         width: 70%;
         margin-right: 10%;
         margin-left: 10%;
-        height: 250px;
+        height: 70%;
         border: 2px solid grey;
         
+    }
+    div.cargaIzq span {
+        margin-left: 10%;
     }
     div.contenedorCarga form div.cargaIzq input {
         margin-right: 10%;

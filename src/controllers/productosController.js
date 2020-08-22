@@ -49,11 +49,19 @@ const productosController = {
       image: req.files[0].filename,
       stock: req.body.stock,
       status: 1,
-    }).then(function (result) {
+    }).then(function (response) {
+      db.Product.findAll({
+        include: [{ association: "regions" }, { association: "types" }],
+        where: {
+          status: 1,
+        },
+        order: [["id", "ASC"]],
+      }).then(function (result) {
       res.render("index", {
         productos: result,
       });
     });
+  })
   },
   productoAdminList: (req, res, next) => {
     db.Product.findAll({
@@ -99,6 +107,20 @@ const productosController = {
           },
         }
       )
+      .then(function (response) {
+        db.Product.findAll({
+          include: [{ association: "regions" }, { association: "types" }],
+          where: {
+            status: 1,
+          },
+          order: [["id", "ASC"]],
+        })
+      .then(function (result) {
+        res.render("index", {
+          productos: result,
+        })
+      })
+    })
     } else {
       db.Product.update(
         {
@@ -119,6 +141,19 @@ const productosController = {
           },
         }
       )
+      .then(function (response) {
+        db.Product.findAll({
+          include: [{ association: "regions" }, { association: "types" }],
+          where: {
+            status: 1,
+          },
+          order: [["id", "ASC"]],
+        }).then(function (result) {
+        res.render("index", {
+          productos: result,
+        })
+      })
+    })
     }
   },
   deleteProduct: function (req, res, next) {

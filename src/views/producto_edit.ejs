@@ -7,14 +7,15 @@
   <%- include('partials/headerNavbar') %>
   <!-- /Header -->
   
-  <h4 class="titCargaProd">Estás editando el producto de nombre "<%= elProducto.name %>"" y id "<%= elProducto.id %>"" </h4>
+  <h4 class="titCargaProd">Estás editando el producto <%= elProducto.name %> con id <%= elProducto.id %></h4>
   
   <div class="contenedorCarga">
     <form method="POST" action="/admin/producto/edit/<%= elProducto.id %>?_method=put">
       <div class="cargaIzq">
         <section class="cargaImgProd">
-          <img src="" alt="" />
+          <img src="/images/products/<%= elProducto.image %>" alt="" />
         </section>
+        <span>Imagen Actual <%= elProducto.image %></span>
         <input
         type="file"
         class="form-control-file"
@@ -74,25 +75,24 @@
         <div class="formCarga required">
           <label for="tipoProducto">Tipo Producto</label>
           <select class="form-control" name="type" id="type">
-            <option value="Cerveza"  <%= elProducto.types.name == 'Cerveza' ? 'selected' : ''%>          >Cerveza</option>
-            <option value="Vino"     <%= elProducto.types.name == 'Vino' ? 'selected' : ''%>       >Vino</option>
-            <option value="Champagna" <%= elProducto.types.name == 'Champagna' ? 'selected' : ''%>           >Espumante</option>
-            <option value="Whisky"    <%= elProducto.types.name == 'Whisky' ? 'selected' : ''%>        >Whisky</option>
+            <option value="3"  <%= elProducto.types.name == 'Cerveza' ? 'selected' : ''%>          >Cerveza</option>
+            <option value="1"     <%= elProducto.types.name == 'Vino' ? 'selected' : ''%>       >Vino</option>
+            <option value="4" <%= elProducto.types.name == 'Champagna' ? 'selected' : ''%>           >Espumante</option>
+            <option value="2"    <%= elProducto.types.name == 'Whisky' ? 'selected' : ''%>        >Whisky</option>
           </select>
         </div>
 
         <div class="formCarga required">
           <label for="regionProducto">Región</label>
-          <input
-          type="text"
-          name="region"
-          class="form-control"
-          id="region"
-          aria-describedby="region"
-          placeholder="Región"
-          required="required"
-          value="<%= elProducto.regions.name %>"
-          />
+          <select class="form-control" name="region" id="region" type="number">
+            <option value="1" <%= elProducto.regions.name == 'Mendoza' ? 'selected' : ''%>>Mendoza</option>
+            <option value="2" <%= elProducto.regions.name == 'San Juan' ? 'selected' : ''%>>San Juan</option>
+            <option value="3" <%= elProducto.regions.name == 'Cordoba' ? 'selected' : ''%>>Cordoba</option>
+            <option value="4" <%= elProducto.regions.name == 'Argentina' ? 'selected' : ''%>>Argentina</option>
+            <option value="5" <%= elProducto.regions.name == 'Chile' ? 'selected' : ''%>>Chile</option>
+          </select>
+
+       
         </div>
         <div class="formCarga required">
           <label for="graduacionProducto">Graduación alcoholica</label>
