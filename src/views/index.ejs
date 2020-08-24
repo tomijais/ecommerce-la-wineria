@@ -1,69 +1,72 @@
 <!DOCTYPE html>
 <html lang="es">
-  <!-- Include Head -->
-  <%- include('partials/head', {title: 'Inicio'}) %>
-  <body>
-    <!-- Header -->
-    <%- include('partials/headerNavbar') %>
-    <!-- /Header -->
-
-    <!-- Banner -->
-    <%- include('partials/banner') %>
-    <!-- /Banner -->
-    <br />
-
-    <div class="iconos">
-      <div class="container">
-        <div class="row">
-          <div class="col-12 col-md-4">
-            <i class="far fa-credit-card"></i>
-            <h5 class="info-home">Compra en Cuotas</h5>
-          </div>
-          <div class="col-12 col-md-4">
-            <i class="fas fa-truck"></i>
-            <h5 class="info-home">Envíos a Domicilio</h5>
-          </div>
-          <div class="col-12 col-md-4">
-            <i class="far fa-clock"></i>
-            <h5 class="info-home">Tiempo de entrega estimado</h5>
-          </div>
-        </div>
-      </div>
+<!-- Include Head -->
+<%- include('partials/head', {title: 'Inicio'}) %>
+<body>
+  <!-- Header -->
+  <%- include('partials/headerNavbar') %>
+  <!-- /Header -->
+  
+  <section class="frase-home">
+    <div>
+      <h2 class="frase-title">Let us fill your glass with joy</h2>
+      <h5>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis, deleniti consequuntur quas illum optio illo quibusdam asperiores cum possimus molestias?</h5>
     </div>
-
-    <!-- Nuestros Productos -->
+  </section>
+  
+  <div class="iconos">
     <div class="container">
       <div class="row">
-        <div class="col-12">
-          <h2 class="productos-titulo">Nuestros productos</h2>
+        <div class="col-12 col-md-4">
+          <i class="far fa-credit-card"></i>
+          <h5 class="info-home">Compra en Cuotas</h5>
+        </div>
+        <div class="col-12 col-md-4">
+          <i class="fas fa-truck"></i>
+          <h5 class="info-home">Envíos a Domicilio</h5>
+        </div>
+        <div class="col-12 col-md-4">
+          <i class="far fa-clock"></i>
+          <h5 class="info-home">Tiempo de entrega estimado</h5>
         </div>
       </div>
-      <!-- Mostrar productos -->
-      <div class="container">
-        <div class="row">
-          <% for(let i=0; i< productos.length; i++) { %>
+      
+    </div>
+  </div>
+  
+  <!-- Nuestros Productos -->
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h2 class="productos-titulo">Nuestros productos</h2>
+      </div>
+    </div>
+    <!-- Mostrar productos -->
+    <div class="container">
+      <div class="row">
+        <% for(let i=0; i< productos.length; i++) { %>
           <div class="col-12 col-md-6 col-xl-3">
             <section class="productos">
               <a href="/producto/detalle/<%= productos[i].id %>">
                 <figure class="">
                   <img class="img-fluid" src="/images/products/<%= productos[i].image %>"
-                    alt="<%= productos[i].name %>"
+                  alt="<%= productos[i].name %>"
                   />
                 </figure>
-			  </a>
-			  
+              </a>
+              
               <article >
-					<a href="/producto/detalle/<%= productos[i].id %>" class="producto">
-						<h3 class="nombre-producto"><%= productos[i].name %></h3>
-					</a>
+                <a href="/producto/detalle/<%= productos[i].id %>" class="producto">
+                  <h3 class="nombre-producto"><%= productos[i].name %></h3>
+                </a>
                 <div >
-					<a href="/producto/detalle/<%= productos[i].id %>" class="extras-producto">
-						<h4>$ <%= productos[i].price %></h4>
-						<span><%= productos[i].discount %> % OFF</span>
-					</a>
+                  <a href="/producto/detalle/<%= productos[i].id %>" class="extras-producto">
+                    <h4>$ <%= productos[i].price %></h4>
+                    <span><%= productos[i].discount %> % OFF</span>
+                  </a>
                 </div>
               </article>
-
+              
               
               <button type="button" class="btn btn-primary btn-lg btn-block">
                 Agregar al carrito
@@ -75,9 +78,10 @@
       </div>
     </div>
     <!-- /ultima visita -->
-
+    
     <!-- footer -->
     <%- include('partials/footer') %>
     <!-- /footer -->
   </body>
-</html>
+  </html>
+  

@@ -1,4 +1,4 @@
-/*====== Basics ======*/
+/*====== Basics, home, vision productos ======*/
 * {
   box-sizing: border-box;
   margin: 0;
@@ -11,6 +11,25 @@ body {
   padding: 0;
   font-family: var(--base-font-family);
   background-color: var(--crema);  
+}
+
+.frase-home {
+  display: flex;
+  margin: 25px;
+  justify-content: center;
+  align-content: center;
+}
+
+.frase-home h2.frase-title {
+  font-family: var(--base-font-family);
+  font-size: 25px;
+  text-align: center;
+}
+
+.frase-home h5 {
+  font-size: 15px;
+  text-align: center;
+  font-style: italic;
 }
 
 ul,
@@ -43,16 +62,6 @@ img.img-fluid {
   border-radius: 10px;
 }
 
-
-img.logo {
-  width: 60%;
-}
-
-.navegador-derecha a {
-  display: block;
-  padding: 5px 0;
-}
-
 .productos-titulo {
   text-align: center;
   font-weight: bold;
@@ -73,24 +82,26 @@ a.producto{
   text-decoration: none;
   font-family: var(--base-font-family);
 }
+
 a.nombre-producto{
   width: 10px;
 }
+
 a.extras-producto{
   display: flex;
   justify-content: center;
 }
+
 a.extras-producto span{
   margin-left: 5px;
 }
 
 a.extras-producto:hover{
-color: black;
-text-align: center;
-text-decoration: none;
-font-family: var(--base-font-family);
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  font-family: var(--base-font-family);
 }
-
 
 article h4 {
   display: flex;
@@ -114,7 +125,27 @@ h2,h3{
   padding: 0 2px;
 }
 
-
 .container{
   max-width: 1400px;
+}
+
+/*====== Media-Queries ======*/
+@media (min-width: 768px) and (max-width: 1099px) {
+  .frase-home h2.frase-title {
+    font-size: 60px;
+  }
+
+  .frase-home h5 {
+    font-size: 25px;
+  }
+}
+
+@media (min-width: 1100px) {
+  .frase-home h2.frase-title {
+    font-size: 70px;
+  }
+
+  .frase-home h5 {
+    font-size: 40px;
+  }
 }

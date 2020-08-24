@@ -1,41 +1,43 @@
-/*====== Header ======*/
+/*====== Header, Navbar & Carousel ======*/
 .header {
-  display: block;
-  text-align: center;
-  padding: 15px 0;
-  background-color: var(--fondo-home);
   width: 100%;
-  left: 0;
-  top: 0;
-  width: 100%;
-  position: relative;  
+
 }
 
-.main-banner {
-  display: none;
-}
-
-.fixed-top {
-  position: relative;
-  z-index: 100;
-}
-
-/*====== Main Navbar ======*/
 .navbar {
   padding: 0 0;
+  width: 100%;
+}
+
+.container-logo {
+  display: flex;
+  z-index: 1000;
+  width: 100%;
 }
 
 .menu-mobile{
-  background-color: var(--dark-blue);
+  position: absolute;
+}
+
+.button-menu {
   color: white;
 }
 
-.menu-desplegado {
-  left: 20vw;
+img.logo {
+  position: absolute;
+  left: 45%;
+  width: 10%;
 }
 
+.main-banner {
+  top: 0;
+  width: 100%;
+}
+
+/*====== Dropdown mobile======*/
 div.buscador {
   margin: 1px 3px;
+  display: flex;
 }
 
 input.input-buscador{
@@ -44,200 +46,144 @@ input.input-buscador{
 }
 
 button.button-buscador {
-  margin-left: 3px;
+  margin: 0 5px;
   color: #666;
   background-color: white;
   border: none;
 }
 
+/*====== No visibles en Mobile ======*/
+
 .navegador {
-  margin-top: 20px;
   display: none;
-}
-
-.navegador-central a {
-  display: block;
-  padding: 5px 0;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: var(--white);
-  font-weight: normal;
-  font-size: 20px;
-}
-
-.navegador-derecha {
-  font-size: 20px;
-}
-
-.navegador-derecha li a{
-  font-size: 18px;
 }
 
 /*====== Media-Queries ======*/
 
-@media (max-width: 768px){
-  img.logo {
-    width: 25%;    
-  }
-}
-
-
-@media (min-width: 768px) and (max-width: 1099px) {
-  .header {
-    display: flex;
-    justify-content: space-around;
-    padding: 0px 0px;
-    box-shadow: 0px 11px 10px -8px rgba(205, 114, 241, 0.4);
-  }
-  
-  .main-banner {
-    display: block;
-    margin-top: 50px;
-  }  
-  
-  .fixed-top {
-    position: fixed;
-  }
-  
-  img.logo {
-    width: 40%;    
-  }
-  
+@media (min-width: 768px) and (max-width: 1099px) {   
   .menu-mobile {
     display: none;
   }
   
+  /*====== Navegadores de tablet y desktop ======*/
   .navegador {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    width: 100%;
   }
-
+  
+  img.logo {
+    width: 15%;
+    left: 0vw;    
+  }
+  
   .navegador-central {
     display: flex;
+    z-index: 2000; 
+    width: 100%;
     flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
+    justify-content: center;
   }
-
+  
   .navegador-central a { 
     font-size: 15px;
+    padding: 5px 0;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--white);
+    font-weight: normal;
   }
-
+  
   .navegador-central a:hover {
     color: var(--light-blue);
   }
-
+  
   .navegador-central li {
-    margin-right: 20px;
+    margin-right: 30px;
     padding: 0;
   }
-    
+  
   .navegador-derecha {
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
+    z-index: 2000;
+    position: absolute;
+    top: 0;
+    right: 0;
   }  
-
+  
   .navegador-derecha li {
     display: flex;
     margin-left: 10px;
     padding: 0;
-    font-size: 20px;
+    font-size: 15px;
   }
-
+  
   .navegador-derecha a:hover {
     color: var(--light-blue);
   }  
-
-  .iconos .container h4 {
-    font-size: 15px;
-  }
 }
 
 @media (min-width: 1100px) {
-  .header {
-    display: flex;
-    justify-content: space-around;
-    padding: 0px 0px;
-    box-sizing: border-box;
-    box-shadow: 0px 11px 10px -8px rgba(205, 114, 241, 0.4);
-  }
-  
-  img.logo {
-    width: 55%;
-  } 
-  
-  .main-banner {
-    display: block;
-    margin-top: 50px;
-  }  
-  
-  .fixed-top {
-    position: fixed;
-  }
-  
-  .iconos {
-    margin-top: 30px;
-    font-size: 40px;
-  }
-  .iconos .container h4 {
-    font-size: 23px;
-  }
-  
-  div.iconos div div {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-  }
-  i{
-    margin-right: 6px;
-  }
-  
   .menu-mobile {
     display: none;
   }
-    
+
+  /*====== Navegadores de tablet y desktop ======*/
   .navegador {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    font-size: 20px;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    width: 100%;
   }
+  
+  img.logo {
+    width: 10%;
+    left: 0vw;
+  } 
   
   .navegador-central {
     display: flex;
+    z-index: 2000; 
+    width: 100%;
     flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    font-size: 20px;
-  } 
-
+    justify-content: center;
+  }
+  
+  .navegador-central a { 
+    font-size: 25px;
+    padding: 5px 0;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--white);
+    font-weight: normal;
+  }
+  
   .navegador-central a:hover {
     color: var(--light-blue);
   }
   
   .navegador-central li {
-    margin-right: 40px;
+    margin: 0px 30px;
+    padding: 0;
   }
   
   .navegador-derecha {
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    font-size: 20px;
-  }
-
-  .navegador-derecha a:hover {
-    color: var(--light-blue);
-  }
-
+    z-index: 2000;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }  
+  
   .navegador-derecha li {
-    margin-left: 15px;
+    display: flex;
+    margin: 0px 7px;
+    padding: 0;
     font-size: 25px;
   }
+  
+  .navegador-derecha a:hover {
+    color: var(--light-blue);
+  } 
 }

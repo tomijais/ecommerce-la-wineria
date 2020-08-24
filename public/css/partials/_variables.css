@@ -1,14 +1,15 @@
 :root {
-  --yellow: #EAC926;
-  --white: #fcf7f7;
-  --dark-blue: #03264C;
-  --light-blue: #84d2f1; /*el que se usa en hover*/  
-  --light-gray: #ebebeb;
-  --green: #39b54a;
-  --crema: #f3ece5;
-  --base-font-family: 'Roboto', sans-serif;;
-  --cursiva: 'Cedarville Cursive', serif;
-  --compensados1: #FC6E44;
-  --fondo-home: #8c1b64;
-  --triada3: #44FC79;
+  --yellow: #EAC926; /* var(--yellow)*/
+  --white: #CBCBCB; /*  var(--white)*/
+  --dark-blue: #03264C; /*  var(--dark-blue)*/
+  --light-blue: #84d2f1; /* hover: var(--light-blue)*/  
+  --light-gray: #ebebeb; /* var(--light-gray)*/
+  --green: #39b54a; /*  var(--green)*/
+  --crema: #f3ece5; /*  var(--crema)*/
+  --base-font-family: 'Bellota Text', 'Roboto', sans-serif; /*  var(--base-font-family)*/
+  --cursiva: 'Cedarville Cursive', serif; /*  var(--cursiva)*/
+  --compensados1: #FC6E44; /* var(--compensados1)*/
+  --fondo-home: #8c1b64; /* var(--fondo-home)*/
+  --triada3: #44FC79; /*  var(--triada3)*/
+  --footer: #36393B; /*  var(--footer)*/
 }
