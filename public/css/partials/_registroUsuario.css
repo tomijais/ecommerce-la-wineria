@@ -3,9 +3,18 @@
   color:red;
 }
 
+.info-usuario {
+  margin: 20% 10%;
+}
+
 .info-usuario h1 {
   font-family: var(--cursiva);    
   text-align: center;
+}
+
+.info-usuario form button {
+  margin-top: 5%;
+  margin-bottom: 20px;
 }
 
 @media (min-width: 768px) and (max-width: 1099px) {
@@ -22,8 +31,7 @@
   }
 
   .info-usuario form button {
-    margin-top: 5px;
-    margin-bottom: 5px;
+    margin-top: 5%;
   }
 }
 
@@ -42,7 +50,6 @@
   }
 
   .info-usuario form button {
-    margin-top: 5px;
-    margin-bottom: 5px;
+    margin-top: 5%;
   }
 }

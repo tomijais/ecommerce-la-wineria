@@ -19,11 +19,14 @@
 /*====== Home ======*/
 @import 'partials/_home.css';
 
-/*====== Header + NavBar principal ======*/
+/*====== Header + NavBar principal del Home ======*/
 @import 'partials/_headerNavbar.css';
 
 /*====== Main-Footer ======*/
 @import 'partials/_footer.css';
+
+/*====== Navbar gral para el resto de views ======*/
+@import 'partials/_navbarGral.css';
 
 /*====== Administración de Productos ======*/
 @import 'partials/_productos_admin.css';

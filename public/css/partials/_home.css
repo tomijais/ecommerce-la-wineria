@@ -7,6 +7,7 @@
 
 body {
   min-height: 100vh;
+  overflow-x: hidden;
   margin: 0;
   padding: 0;
   font-family: var(--base-font-family);
@@ -30,6 +31,12 @@ body {
   font-size: 15px;
   text-align: center;
   font-style: italic;
+}
+
+h5.info-home {
+  display: inline;
+  margin-left: 10px; 
+  text-align: center;
 }
 
 ul,
@@ -66,7 +73,8 @@ img.img-fluid {
   text-align: center;
   font-weight: bold;
   font-size: 5vh;
-  margin: 30px 0;
+  margin-top: 5%;
+  margin-bottom: 5%;
 }
 
 .productos {
@@ -125,9 +133,6 @@ h2,h3{
   padding: 0 2px;
 }
 
-.container{
-  max-width: 1400px;
-}
 
 /*====== Media-Queries ======*/
 @media (min-width: 768px) and (max-width: 1099px) {
@@ -138,6 +143,11 @@ h2,h3{
   .frase-home h5 {
     font-size: 25px;
   }
+
+  h5.info-home {
+    font-size: 20px;
+  }
+  
 }
 
 @media (min-width: 1100px) {
@@ -147,5 +157,9 @@ h2,h3{
 
   .frase-home h5 {
     font-size: 40px;
+  }
+
+  h5.info-home {
+    font-size: 30px;
   }
 }
