@@ -3,7 +3,7 @@ const path = require("path");
 const multer = require("multer");
 let db = require("../database/models");
 const { Op } = require("sequelize");
-const User = require("../database/models/Product");
+
 
 //const productosFilePath = path.join(__dirname, '../data/productsDataBase.json');
 //const productos = JSON.parse(fs.readFileSync(productosFilePath, 'utf-8'));

@@ -3,9 +3,7 @@ const path = require("path");
 const multer = require("multer");
 let db = require("../database/models");
 const { Op } = require("sequelize");
-const Product = require("../database/models/Product");
-const Type = require("../database/models/Type");
-const Region = require("../database/models/Region");
+
 
 const productosController = {
   productoAdmin: (req, res, next) => {

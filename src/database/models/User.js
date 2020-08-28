@@ -24,7 +24,7 @@ module.exports = function(sequelize, dataTypes) {
             allowNull: false
         },
         category: {
-            type: dataTypes.TINYINT(10).UNSIGNED,
+            type: dataTypes.INTEGER(11).UNSIGNED,
             allowNull: false
         },
         image: {
@@ -42,7 +42,13 @@ module.exports = function(sequelize, dataTypes) {
     
     let User = sequelize.define(alias, cols, config);
 
-    
+    User.associate = function(models) {
+        User.belongsTo(models.UserCategory, {
+            as: "user_category",
+            foreignKey: "category"
+        });
+        
+    }
 
     return User;
 }

@@ -67,10 +67,11 @@
                 </div>
               </article>
               
-              
-              <button type="button" class="btn btn-primary btn-lg btn-block">
+              <form action="/carrito/add/<%= productos[i].id %>" method="GET">
+              <button type="submit" class="btn btn-primary btn-lg btn-block">
                 Agregar al carrito
               </button>
+              </form>
             </section>
           </div>
           <% } %>
