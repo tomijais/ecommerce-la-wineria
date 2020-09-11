@@ -18,6 +18,7 @@ let usersController = {
   },
   ingresar: (req, res, next) => {
     let errors = validationResult(req);
+    
     if (errors.isEmpty()) {
       db.User.findAll().then(function (usuarios) {
         for (let i = 0; i < usuarios.length; i++) {
