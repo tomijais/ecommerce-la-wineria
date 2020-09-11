@@ -6,10 +6,15 @@
 }
 
 article.footer-data h4.footer-titles {
-  font-size: 20px;  
+  font-size: 20px;
+  font-weight: bold;
   margin-top: 3px;
   margin-bottom: 0;
 } 
+
+article.footer-data{
+  text-align: center;
+}
 
 ul.info-links li{
   padding: 5px;
@@ -35,8 +40,22 @@ article.footer-redes a.redes:hover {
   color: var(--light-blue);
 }
 
-input[name="newsletter"] {
-  text-align: center;
+form.form-newsletter {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+input.input-newsletter {
+  width: 60%;
+  padding: 5px 5px;
+  margin: 3px 5px;
+  height: 8vh;
+}
+
+button.button-newsletter {
+  padding: 0px 10px;
+  font-size: 15px;
 }
 
 .main-footer .container-fluid p {
@@ -78,6 +97,11 @@ input[name="newsletter"] {
   article.footer-redes a.redes {
     font-size: 25px;
   }
+
+  input.input-newsletter {
+    width: 100%;
+    margin-bottom: 5px;
+  }
 }
 
 
@@ -111,4 +135,5 @@ input[name="newsletter"] {
 
   article.footer-redes a.redes {
     font-size: 25px;
+  }
 }

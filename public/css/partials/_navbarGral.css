@@ -12,6 +12,11 @@ img.logo2 {
   width: 40px;
 }
 
+ul.dif-colors li a {
+  color: var(--white);
+  font-weight: normal;
+}
+
 /*====== Media-Queries ======*/
 
 @media (min-width: 768px) and (max-width: 1099px) {
