@@ -10,6 +10,7 @@ const cookieParser = require("cookie-parser");
 const mainRouter = require("./routes/main");
 const usersRouter = require("./routes/users");
 const productsRouter = require("./routes/products");
+const cartRouter = require("./routes/cart");
 
 const rememberCookie = require("./middlewares/rememberCookie.js");
 
@@ -39,6 +40,7 @@ app.set("views", path.join(__dirname, "/views")); // Define la ubicación de la 
 app.use("/", mainRouter);
 app.use("/users", usersRouter);
 app.use("/admin", productsRouter);
+app.use("/cart", cartRouter);
 
 // ************ Arrancando el servidor - (No tocar) ************
 app.listen(3000, () => {
