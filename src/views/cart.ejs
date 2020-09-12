@@ -10,10 +10,12 @@
 	<div class="title-pages">
 		<h4><a href="/">Inicio</a> / <a href="/carrito">Carrito</a></h4>
 	</div>
-	
+	<br>
+	<% if(typeof productosCart !== 'undefined') { %>
 	<div class="container">
 		<div class="row">
-			<div class="col-12 col-md-10 col-sm-12">					
+			<div class="col-12 col-md-10 col-sm-12">
+									
 				<table class="table table-responsive-sm table-borderless table-hover table-sm">
 					<thead>
 						<tr>
@@ -26,27 +28,36 @@
 						</tr>
 					</thead>					
 					<tbody>
+						<% for(let i = 0; i < productosCart.length; i++) { %>
 						<tr>
-							<td class="rest"><img src="images/products/vino-bressia-red-blend.jpg" alt=""></td>
-							<td class="prod"><a href="#">Nombre de Producto</a></td>
-							<td class="rest">$ precio</td>
-							<td class="rest"><input type="number" value="1" min="1"></td>
-							<td class="rest">$ Subtotal</td>
-							<td class="rest"><a href=""><i class="fas fa-trash-alt"></i></a></td>
+							<td class="rest">
+								<img src="/images/products/<%= productosCart[i].image %>" alt="">
+							</td>
+							<td class="prod">
+								<a href="#"><%= productosCart[i].name %></a>
+							</td>
+							<td class="rest">$ <%= productosCart[i].price %>
+							</td>
+							<td class="rest"><input type="number" value="<%= productosCart[i].cantidad %>" min="1"></td>
+							<td class="rest">$ <%= (productosCart[i].price * productosCart[i].cantidad) %></td>
+							
+							<td class="rest">
+								<form action="">
+									<input type="hidden" value="" name="" id="">
+									<button class="btn btn-danger"><i class="fas fa-trash"></i></button>
+								</form>
+							</td>
+							
+							
 						</tr>
-						<tr>
-							<td class="rest"><img src="images/products/vino-bressia-red-blend.jpg" alt=""></td>
-							<td class="prod"><a href="#">Nombre de Producto</a></td>
-							<td class="rest">$ precio</td>
-							<td class="rest"><input type="number" value="1" min="1"></td>
-							<td class="rest">$ Subtotal</td>
-							<td class="rest"><a href=""><i class="fas fa-trash-alt"></i></a></td>
-						</tr>
+						<% } %>
+						
 					</tbody>					
 				</table>
 				
+				
 				<div class="botonesCarrito">
-					<a href="#" class="botonCarrito">Seguir Comprando</a>
+					<a href="/" class="botonCarrito">Seguir Comprando</a>
 					<a href="#" class="botonCarrito">Limpiar Carrito</a>
 				</div>
 				
@@ -86,6 +97,17 @@
 			
 		</div>
 	</div>
+	<% } else { %>
+		<div class="container">
+			<div class="row">
+				<div class="col-12 col-md-10 col-sm-12">
+					<h2>Todavía no tenés artículos en tu carrito :(</h2>
+				</div>
+			</div>
+		</div>
+		<br><br><br><br><br><br><br><br><br><br>
+	<% } %>
+
 	
 	
 	<!-- footer -->
