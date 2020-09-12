@@ -21,21 +21,19 @@
               id="exampleInputEmail1"
               aria-describedby="emailHelp"
             />
-            <small class="text-danger"
+            <small class="text-danger validate-email"
               ><%= (typeof errors != 'undefined' && errors.email) ?
               errors.email.msg : '' %></small
             >
-            <small class="text-danger validate-email"></small>
           </div>
           <div class="form-group">
             <label for="exampleInputPassword1">Password</label>
             <input type="password" name="password" class="form-control"
             id="exampleInputPassword1" ">
-            <small class="text-danger"
+            <small class="text-danger validate-password"
               ><%= (typeof errors != 'undefined' && errors.password) ?
               errors.password.msg : '' %></small
             >
-            <small class="text-danger validate-password"></small>
           </div>
           <div class="form-group form-check">
             <input
@@ -57,7 +55,6 @@
 
     <%- include('./partials/footer') %>
 
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
-    <script src="/js/valitation-login.js" type="text/javascript"></script>
+    <script src="/js/validations-front/login.js" type="text/javascript"></script>
   </body>
 </html>
