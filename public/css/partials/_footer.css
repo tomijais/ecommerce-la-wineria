@@ -47,13 +47,13 @@ form.form-newsletter {
 }
 
 input.input-newsletter {
-  width: 60%;
+  width: 75%;
   padding: 5px 5px;
   margin: 3px 5px;
-  height: 8vh;
 }
 
 button.button-newsletter {
+  width: 45%;
   padding: 0px 10px;
   font-size: 15px;
 }

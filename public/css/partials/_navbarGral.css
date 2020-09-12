@@ -24,6 +24,10 @@ ul.dif-colors li a {
     height: 60px;
   }
 
+  ul.dif-colors li a {
+    padding: 5px 0px;
+  }
+
   img.logo2 {
     width: 55px;
     left: 0vw;    
@@ -33,6 +37,10 @@ ul.dif-colors li a {
 @media (min-width: 1100px) {
   div.navbar-gral {
     height: 60px;
+  }
+
+  ul.dif-colors li a {
+    font-size: 25px;
   }
 
   img.logo2 {
