@@ -1,9 +1,9 @@
-.first-row {
+.card-margin {
     margin-bottom: 10px;
 }
 
 h3.adminProd {
-    padding-top: 12%;
+    margin-top: 15vh; 
     text-align: center;
 }
 
@@ -16,7 +16,7 @@ div.contenedorAdmin {
 
 @media (min-width: 768px) and (max-width: 1099px) {
     h3.adminProd {
-        padding-top: 15%;        
+        margin-top: 20vh;       
     }
     
     div.card {
