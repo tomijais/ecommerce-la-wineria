@@ -42,7 +42,7 @@ const controller = {
       });
     });
   },
-  carrito: (req, res) => {
+  /*carrito: (req, res) => {
     db.Product.findAll({
       include: [{ association: "regions" }, { association: "types" }],
       where: {
@@ -54,7 +54,7 @@ const controller = {
         productos: result,
       });
     });
-  },
+  },*/
   exit: (req, res) => {
     req.session.destroy();
     res.cookie("remember", "", { maxAge: -1 });
