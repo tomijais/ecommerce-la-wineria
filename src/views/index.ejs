@@ -69,6 +69,8 @@
               
               <form class="juan" action="/cart/add" method="post">
                 <input type="hidden" value="<%= productos[i].id %>" name="id_producto">
+                <label type="hidden"></label>
+								<input type="hidden" name="cantidad" value="1">
                 <button type="submit" class="btn btn-primary btn-lg btn-block">
                 Agregar al carrito
               </button>
@@ -84,6 +86,6 @@
     <!-- footer -->
     <%- include('partials/footer') %>
     <!-- /footer -->
-    <script src="/js/index.js"></script>
+    
   </body>
   </html>

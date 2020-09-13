@@ -30,5 +30,20 @@ module.exports = {
         }
 
         return res.json(req.session.cart);
+    },
+    delete: function(req, res) {
+        let idProducto = req.body.id_producto
+        console.log(idProducto)
+        let cart = req.session.cart
+        let nuevoCart = cart.filter(function(elemento){
+            return elemento.id != idProducto;
+        })
+        
+        req.session.cart = nuevoCart
+        
+        res.render('cart', {
+            productosCart: req.session.cart
+        });
+        
     }
 }   

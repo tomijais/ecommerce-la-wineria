@@ -12,6 +12,8 @@
 	</div>
 	<br>
 	<% if(typeof productosCart !== 'undefined') { %>
+		<% if(productosCart.length > 0) { %>
+		
 	<div class="container">
 		<div class="row">
 			<div class="col-12 col-md-10 col-sm-12">
@@ -42,9 +44,9 @@
 							<td class="rest">$ <%= (productosCart[i].price * productosCart[i].cantidad) %></td>
 							
 							<td class="rest">
-								<form action="">
-									<input type="hidden" value="" name="" id="">
-									<button class="btn btn-danger"><i class="fas fa-trash"></i></button>
+								<form class="borrar" action="/cart/delete" method="POST">
+									<input type="hidden" value="<%= productosCart[i].id %>" name="id_producto">
+									<button type="submit" class="btn btn-danger"><i class="fas fa-trash"></i></button>
 								</form>
 							</td>
 							
@@ -101,13 +103,22 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-12 col-md-10 col-sm-12">
-					<h2>Todavía no tenés artículos en tu carrito :(</h2>
+					<h2>No tenés artículos en tu carrito <i class="far fa-frown"></i></h2>
 				</div>
 			</div>
 		</div>
 		<br><br><br><br><br><br><br><br><br><br>
 	<% } %>
-
+	<% } else { %>
+		<div class="container">
+			<div class="row">
+				<div class="col-12 col-md-10 col-sm-12">
+					<h2>Todavía no tenés artículos en tu carrito <i class="far fa-frown"></i></h2>
+				</div>
+			</div>
+		</div>
+		<br><br><br><br><br><br><br><br><br><br>
+	<% } %>
 	
 	
 	<!-- footer -->

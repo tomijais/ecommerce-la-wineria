@@ -6,5 +6,6 @@ const userMiddleware = require('../middlewares/userMiddleware');
 
 router.get('/', userMiddleware, cartController.get);
 router.post('/add', userMiddleware, cartController.add);
+router.post('/delete', userMiddleware, cartController.delete);
 
 module.exports = router;

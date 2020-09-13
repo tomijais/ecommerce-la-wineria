@@ -97,6 +97,10 @@ a.producto{
 
 a.nombre-producto{
   width: 10px;
+  
+}
+h3.nombre-producto {
+  height: 48px;
 }
 
 a.extras-producto{
