@@ -10,7 +10,7 @@
   <h4 class="titCargaProd">Carga de Nuevo Producto</h4>
   
   <div class="contenedorCarga">
-    <form action="" method="post" enctype="multipart/form-data">
+    <form class="form-carga" action="" method="post" enctype="multipart/form-data">
       
       <div class="cargaIzq">
         <section class="cargaImgProd">
@@ -36,8 +36,9 @@
           aria-describedby="name"
           placeholder="Nombre Producto"
           required="required"
-          />
-        </div>
+          /><br>
+          <small class="text-danger validation-name"></small>
+        </div>        
         
         <div class="formCarga required">
           <label for="anioProducto">Año Producto</label>
@@ -49,7 +50,8 @@
           aria-describedby="anio"
           placeholder="Año Producto"
           required="required"
-          />
+          /><br>
+          <small class="text-danger validation-year"></small>
         </div>
         <div class="formCarga required">
           <label for="bodegaProducto">Bodega</label>
@@ -61,7 +63,8 @@
           aria-describedby="bodega"
           placeholder="Bodega"
           required="required"
-          />
+          /><br>
+          <small class="text-danger validation-bodega"></small>
         </div>
         <div class="formCarga required">
           <label for="tipoProducto">Tipo Producto</label>
@@ -119,7 +122,8 @@
           aria-describedby="price"
           placeholder="Precio"
           required="required"
-          />
+          /><br>
+          <small class="text-danger validation-price"></small>
         </div>
         <div class="formCarga required">
           <label for="descuentoProducto">Descuento</label>
@@ -155,7 +159,8 @@
           aria-describedby="description"
           placeholder="Descripción"
           required="required"
-          />
+          /> <br>
+          <small class="text-danger validation-description"></small>
         </div>
         <button type="submit" class="btn btn-success">
           Agregar producto
@@ -166,5 +171,6 @@
   <!-- footer -->
   <%- include('partials/footer') %>
   <!-- /footer -->
+  <script src="/js/validations-front/producto-carga.js" type="text/javascript"></script>
 </body>
 </html>
