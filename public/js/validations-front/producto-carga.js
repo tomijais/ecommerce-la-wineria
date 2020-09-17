@@ -123,7 +123,7 @@ window.addEventListener("load", function () {
         text: "Por favor revisa los campos e intentalo nuevamente",
       });
     } else {
-      form.submit();
+      formProd.submit();
     }
   })
   

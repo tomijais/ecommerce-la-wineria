@@ -96,7 +96,10 @@ const productosController = {
           description: req.body.description,
           price: req.body.price,
           discount: req.body.discount,
-          image: req.files[0].filename,
+          image:
+            req.files[0] != undefined
+              ? req.files[0].filename
+              : req.body.image,
           stock: req.body.stock,
         },
         {
@@ -104,21 +107,19 @@ const productosController = {
             id: req.params.id,
           },
         }
-      )
-      .then(function (response) {
+      ).then(function (response) {
         db.Product.findAll({
           include: [{ association: "regions" }, { association: "types" }],
           where: {
             status: 1,
           },
           order: [["id", "ASC"]],
-        })
-      .then(function (result) {
-        res.render("index", {
-          productos: result,
-        })
-      })
-    })
+        }).then(function (result) {
+          res.render("index", {
+            productos: result,
+          });
+        });
+      });
     } else {
       db.Product.update(
         {
@@ -200,6 +201,17 @@ const productosController = {
     }
   );
   res.redirect("/admin/productos");
+  },
+  api: (req,res) => {
+    db.Product.findAll({
+      include: [{ association: "regions" }, { association: "types" }],
+      where: {
+        status: 1,
+      },
+      order: [["id", "ASC"]],
+    }).then(function (result) {
+      res.json(result);
+    });
   }
 };
 

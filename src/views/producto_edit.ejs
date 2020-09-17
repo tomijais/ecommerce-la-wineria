@@ -10,10 +10,9 @@
   <h4 class="titCargaProd">Estás editando el producto <%= elProducto.name %> con id <%= elProducto.id %></h4>
   
   <div class="contenedorCarga">
-    <form class="form-edit" method="POST" action="/admin/producto/edit/<%= elProducto.id %>?_method=put">
+    <form class="form-edit" method="POST" action="/admin/producto/edit/<%= elProducto.id %>?_method=put" enctype="multipart/form-data">
       <div class="cargaIzq">
-        <section class="cargaImgProd">
-          <img src="/images/products/<%= elProducto.image %>" alt="" />
+        <section class="cargaImgProd" style="background: url('/images/products/<%= elProducto.image %>') center center no-repeat; background-size: contain; background-color: white;">
         </section>
         <span>Imagen Actual <%= elProducto.image %></span>
         <input

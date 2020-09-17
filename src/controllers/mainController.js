@@ -23,6 +23,21 @@ const controller = {
       });
     });
   },
+  filtro: (req, res) => {
+    db.Product.findAll({
+      include: [{ association: "regions" }, { association: "types" }],
+      where: {
+        status: 1,
+        type_id: req.params.id,
+      },
+      order: [["id", "ASC"]],
+    }).then(function (result) {
+      res.render("index", {
+        productos: result,
+        user: req.session.user ? req.session.user : "",
+      });
+    });
+  },
   productoDetalle: (req, res) => {
     db.Product.findAll({
       include: [{ association: "regions" }, { association: "types" }],
