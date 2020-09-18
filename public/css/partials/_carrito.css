@@ -13,7 +13,17 @@
     color: var(--light-blue);
 }
 
+.cart-detail {
+    background-color: whitesmoke;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 grey;
+}
 
+.sale-details {
+    display: inline-flex;
+    justify-content: center;
+    margin: 0 auto;
+}
 .sale-details .formDiscount {
     margin-top: 3vh;
     margin-left: 5vw;
@@ -43,7 +53,7 @@
 }
 
 .sale-details .second-form div label {
-    width: 20%;
+    width: 40%;
     margin-right: 2vw;
 }
 
@@ -104,6 +114,7 @@ a.botonCarrito {
     background-color: #32971D;
     height: 40px;
     margin-right: 6px;
+    margin-bottom: 10px;
     padding: 10px;
     border-radius: 5px;
     text-align: center;
@@ -205,6 +216,3 @@ a.botonCarrito {
     }
 
 }
-
-}
-

@@ -17,6 +17,7 @@ ul.dif-colors li a {
   font-weight: normal;
 }
 
+
 /*====== Media-Queries ======*/
 
 @media (min-width: 768px) and (max-width: 1099px) {
@@ -32,6 +33,10 @@ ul.dif-colors li a {
     width: 55px;
     left: 0vw;    
   }
+
+  div.carrito-mobile {
+    display: none;
+  }
 }   
 
 @media (min-width: 1100px) {
@@ -46,5 +51,9 @@ ul.dif-colors li a {
   img.logo2 {
     width: 60px;
     left: 0vw;    
+  }
+
+  div.carrito-mobile {
+    display: none;
   }
 }

@@ -26,13 +26,19 @@
       <div class="btn-group dropleft user-mobile">
         <a class="btn btn-sm dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-users"></i></a>
         <div class="dropdown-menu">
-          <a class="dropdown-item" href="/users/register"> Registrate</a> <!-- Deberia dejar verse al estar logueado-->
-          <a class="dropdown-item" href="/users/login"> Ingresar</a>
+          <% if (!user) { %>
+            <a class="dropdown-item" href="/users/register"> Registrate</a> <!-- Deberia dejar verse al estar logueado-->
+            <a class="dropdown-item" href="/users/login"> Ingresar</a>
+          <% } else {%>
           <a class="dropdown-item" href="/exit"> Logout</a> <!-- Deberia verse solo estando logueado-->
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="/users/account/<%=(user ? user.id :":id" )%>">Tu cuenta</a>
-        </div>
-      </div>     
+          <% } %>
+        </div>        
+      </div>  
+      <div class="carrito-mobile">
+        <a href="/cart"><i class="fas fa-shopping-basket"></i></a>
+      </div>   
     </div>
     
     
@@ -70,11 +76,9 @@
 
         <div class="buscador">
           <input list="search"type="text" class="input-buscador" placeholder="¿Qué buscas?">
-          <datalist id="search" class="products-search"> 
+          <ul id="search" class="products-search"> 
             
-        </datalist> 
-          <button type="submit" class="button-buscador"><i class="fas fa-search"></i></button>
-
+        </ul> 
         </div>
       </ul>
 

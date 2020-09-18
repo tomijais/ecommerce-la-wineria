@@ -4,7 +4,6 @@ window.addEventListener("load", function () {
   const $input_search = document.querySelector(".input-buscador");
 
   $input_search.addEventListener("input", function (e) {
-
     fetch("/admin/api")
       .then(function (response) {
         return response.json();
@@ -12,8 +11,7 @@ window.addEventListener("load", function () {
       .then(function (info) {
         $list.innerHTML = "";
         if (e.target.value == "") {
-          return ($list.innerHTML +=
-            "<option>No encontramos resultados...</option>");
+          $list.innerHTML = "";
         } else {
           info.forEach((dato) => {
             if (
@@ -22,14 +20,10 @@ window.addEventListener("load", function () {
                 .match(new RegExp(e.target.value.toLowerCase()))
             ) {
               $list.innerHTML +=
-                '<option value="' + dato.name + '">' + dato.name + "</option>";
+                `<li><a href='/producto/detalle/${dato.id}'>${dato.name}<a/></li>`
             }
           });
         }
       });
-
-
-
-
   });
 });

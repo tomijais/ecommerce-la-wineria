@@ -13,10 +13,10 @@
 	<br>
 	<% if(typeof productosCart !== 'undefined') { %>
 		<% if(productosCart.length > 0) { %>
-		
+		<% let subtotal = 0 %>
 	<div class="container">
 		<div class="row">
-			<div class="col-12 col-md-10 col-sm-12">
+			<div class="col-12 col-md-10 col-sm-12 cart-detail">
 									
 				<table class="table table-responsive-sm table-borderless table-hover table-sm">
 					<thead>
@@ -31,6 +31,7 @@
 					</thead>					
 					<tbody>
 						<% for(let i = 0; i < productosCart.length; i++) { %>
+							<% subtotal = subtotal + (productosCart[i].price * productosCart[i].cantidad) %>
 						<tr>
 							<td class="rest">
 								<img src="/images/products/<%= productosCart[i].image %>" alt="">
@@ -62,39 +63,56 @@
 					<a href="/" class="botonCarrito">Seguir Comprando</a>
 					<a href="#" class="botonCarrito">Limpiar Carrito</a>
 				</div>
-				
+			
+				<div class="sale-details">
+					
+					<div class="container">
+						<div class="row">
+							<div class="col-6 col-md-6 col-sm-6">
+								<div class="formDiscount">
+									<form action="">
+										<label for="">Cupon de Descuento</label>
+										<div>
+											<input type="text" name="cupon">
+											<button type="submit">Aplicar</button>
+										</div>
+									</form>
+								</div>
+							</div>
+
+							<div class="col-6 col-md-6 col-sm-6">
+							
+								<div class="second-form">
+									<form action="">
+										<div>
+											<label for="subtotal">Subtotal</label>
+											<input type="text" name="subtotal" value='$ <%= subtotal %>' disabled>
+										</div>
+										<div>
+											<label for="descuento">Descuento %</label>
+											<input type="text" name="descuento" value='$ 0' disabled>
+										</div>							
+										<div>
+											<label for="total">Total</label>
+											<input type="text" name="total" value='$ <%= subtotal %>' disabled>
+										</div>
+										<button type="submit">Finalizar Compra</button>
+									</form>	
+								</div>
+
+							</div>
+						</div>
+					</div>
+					
+
+					
+				</div>		
+
 			</div>
 			
 			
 			
-			<div class="sale-details">
-				<div class="formDiscount">
-					<form action="">
-						<label for="">Cupon de Descuento</label>
-						<div>
-							<input type="text" name="cupon">
-							<button type="submit">Aplicar</button>
-						</div>
-					</form>
-				</div>
-				<div class="second-form">
-					<form action="">
-						<div>
-							<label for="">Subtotal</label>
-							<input type="number" name="cupon" value="2000" disabled>
-						</div>
-						<div>
-							<label for="">Envío</label>
-							<input type="text" name="envio">
-						</div>							
-						<div>
-							<label for="">Total</label>
-							<input type="number" value="2000" disabled>
-						</div>
-						<button type="submit">Finalizar Compra</button>
-					</form>	
-				</div>
-			</div>				
+					
 			
 			
 		</div>
@@ -120,7 +138,8 @@
 		<br><br><br><br><br><br><br><br><br><br>
 	<% } %>
 	
-	
+	<br><br>
+
 	<!-- footer -->
 	<%- include('partials/footer') %>
 	<!-- /footer -->

@@ -53,9 +53,17 @@ button.button-buscador {
 
 div.user-mobile {
   position: absolute;
-  right: 7px;
   top: 3px;
+  right: 30px;
 }
+
+div.carrito-mobile {
+  position: absolute;
+  right: 10px;
+  top: 8px;
+}
+
+
 
 /*====== No visibles en Mobile ======*/
 
@@ -67,6 +75,10 @@ div.user-mobile {
 
 @media (min-width: 768px) and (max-width: 1099px) {   
   .menu-mobile {
+    display: none;
+  }
+  
+  div.carrito-mobile {
     display: none;
   }
   
@@ -139,6 +151,10 @@ div.user-mobile {
   }
   
   div.user-mobile{
+    display: none;
+  }
+
+  div.carrito-mobile {
     display: none;
   }
 

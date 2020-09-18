@@ -4,8 +4,8 @@ const cartController = require('../controllers/cartController');
 
 const userMiddleware = require('../middlewares/userMiddleware');
 
-router.get('/', userMiddleware, cartController.get);
-router.post('/add', userMiddleware, cartController.add);
-router.post('/delete', userMiddleware, cartController.delete);
+router.get("/", cartController.get);
+router.post("/add", cartController.add);
+router.post("/delete", cartController.delete);
 
 module.exports = router;

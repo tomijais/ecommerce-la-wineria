@@ -26,9 +26,8 @@ let usersController = {
             usuarios[i].email == req.body.email &&
             bcrypt.compareSync(req.body.password, usuarios[i].password)
           ) {
-            if (usuarios[i].category == 1) {
-              req.session.user = usuarios[i];
-            }
+            req.session.user = usuarios[i];
+            res.locals.user = usuarios[i];
             if (req.body.remember != undefined) {
               res.cookie("remember", usuarios[i].id, {
                 maxAge: 1000 * 60 * 60,
