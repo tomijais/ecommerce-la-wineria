@@ -12,7 +12,8 @@ window.addEventListener("load", function () {
       .then(function (info) {
         $list.innerHTML = "";
         if (e.target.value == "") {
-          return ($list.innerHTML = "");
+          return ($list.innerHTML +=
+            "<option>No encontramos resultados...</option>");
         } else {
           info.forEach((dato) => {
             if (
