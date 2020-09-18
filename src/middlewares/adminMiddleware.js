@@ -1,7 +1,8 @@
 function adminMiddleware(req, res, next) {
     if(req.session.user) {
         if(req.session.user.category === 1){
-                    next();
+            res.locals.localAdmin =  req.user 
+            next();        
         }else {
             res.redirect('/')
         }
