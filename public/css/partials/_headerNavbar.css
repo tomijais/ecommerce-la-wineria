@@ -200,3 +200,8 @@ div.user-mobile {
     color: var(--light-blue);
   } 
 }
+
+
+input::-webkit-calendar-picker-indicator {
+  display: none;
+}
