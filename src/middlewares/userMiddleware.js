@@ -1,6 +1,7 @@
 function userMiddleware(req, res, next) {
     if(req.session.user) {
-        next();
+        res.locals.localUser = req.user 
+        next();              
     } else {
         res.redirect('/')
     }

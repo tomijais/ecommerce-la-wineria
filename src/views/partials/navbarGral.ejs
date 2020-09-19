@@ -27,11 +27,14 @@
         <div class="btn-group dropleft user-mobile">
           <a class="btn btn-sm dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-users"></i></a>
           <div class="dropdown-menu">
-            <a class="dropdown-item" href="/users/register"> Registrate</a> <!-- Deberia dejar verse al estar logueado-->
-            <a class="dropdown-item" href="/users/login"> Ingresar</a>
-            <a class="dropdown-item" href="/exit"> Logout</a> <!-- Deberia verse solo estando logueado-->
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="/users/account/<%=(user ? user.id :":id" )%>">Tu cuenta</a>
+            <% if(typeof localUser == "undefined") { %>
+              <a class="dropdown-item" href="/users/register"> Registrate</a> <!-- Deberia dejar verse al estar logueado-->
+              <a class="dropdown-item" href="/users/login"> Ingresar</a>
+            <% } else { %>
+              <a class="dropdown-item" href="/exit"> Logout</a> <!-- Deberia verse solo estando logueado-->
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="/users/account/<%=(user ? user.id :":id" )%>">Tu cuenta</a>
+            <% } %>
           </div>
         </div>         
       </div> 
@@ -55,15 +58,20 @@
           <li class="dropdown">
             <a class="btn btn-sm dropdown-toggle dropdown-toggle-split" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-users"></i></a>
             <div class="dropdown-menu">
-              <a class="dropdown-item" href="/users/register"> Registrate</a> <!-- Deberia dejar verse al estar logueado-->
-              <a class="dropdown-item" href="/users/login"> Ingresar</a>
-              <a class="dropdown-item" href="/exit"> Logout</a> <!-- Deberia verse solo estando logueado-->
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="/users/account/<%=(user ? user.id :":id" )%>">Tu cuenta</a>
+              <% if(typeof localUser == "undefined") { %>
+                <a class="dropdown-item" href="/users/register"> Registrate</a> <!-- Deberia dejar verse al estar logueado-->
+                <a class="dropdown-item" href="/users/login"> Ingresar</a>
+              <% } else { %>
+                <a class="dropdown-item" href="/exit"> Logout</a> <!-- Deberia verse solo estando logueado-->
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="/users/account/<%=(user ? user.id :":id" )%>">Tu cuenta</a>
+              <% } %>
             </div>
           </li>
           <li>
-            <a href="/admin/index"><i class="fas fa-edit"></i></a>
+            <% if(typeof localAdmin !== "undefined") { %>
+              <a href="/admin/index"><i class="fas fa-edit"></i></a>
+            <% } %>
           </li>
         </ul>
       </nav> 
