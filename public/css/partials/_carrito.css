@@ -26,39 +26,51 @@
 }
 .sale-details .formDiscount {
     margin-top: 3vh;
-    margin-left: 5vw;
+    width: 40%;
+    
 }
-
-.sale-details .formDiscount form label{    
+.sale-details .formDiscount form div {    
+ 
+    width: 150%;
+ 
+}
+.sale-details .formDiscount form div label{    
     margin-bottom: 2vh;
+    width: 100%;
+    font-weight: bold;
 }
-
+.sale-details .formDiscount form div input {
+ width: 100%;
+}
 .sale-details .formDiscount form div button {
-    width: 20%;
+    width: 100%;
     background-color: #32971D;
     border-radius: 5px;
     padding: 1px;
-    margin-left: 2vw;
+    margin-top: 10%;
+    margin-left: 1vw;
     text-align: center;
     text-decoration: none; 
 }
 
-.sale-details .formDiscount form div input {
-    width: 70%;
-}
+
 
 .sale-details .second-form {
     margin-top: 3vh;
     margin-left: 5vw;
+    display: inline;
 }
 
 .sale-details .second-form div label {
-    width: 40%;
-    margin-right: 2vw;
+    width: 45%;
+    font-weight: bold;
+    display: inline-block;
 }
 
 .sale-details .second-form div input {
-    width: 70%;
+    width: 45%;
+    display: inline-block;
+    font-weight: bold;
 }
 
 .sale-details .second-form form button {
@@ -135,16 +147,24 @@ a.botonCarrito {
     }
 
     .sale-details .formDiscount {
-        width: 40%;
+        width: 80%;
     }
-
+    
+    .sale-details .formDiscount form div {    
+ 
+        width: 100%;
+     
+    }
     .sale-details .formDiscount form div input {
         width: 90%;
+        display: inline-block;
     }
 
     .sale-details .formDiscount form div button {
         width: 40%;
-        margin: 6vh 7vw;
+        margin-left: 25%;
+        margin-top: 10%;
+        display: inline-block;
     }
         
 
@@ -183,16 +203,23 @@ a.botonCarrito {
     }
 
     .sale-details .formDiscount {
-        width: 40%;
+        width: 100%;
+        margin-top: 10%;
     }
-
+    .sale-details .formDiscount form div {    
+ 
+        width: 80%;
+     
+    }
     .sale-details .formDiscount form div input {
-        width: 90%;
+        display: inline-block;
+        width: 80%;
     }
 
     .sale-details .formDiscount form div button {
         width: 40%;
-        margin: 6vh 7vw;
+        margin-left: 20%;
+        
     }
         
 
@@ -206,7 +233,7 @@ a.botonCarrito {
     }
 
     .sale-details .second-form div input {
-        width: 100%;
+        
     }
 
     .sale-details .second-form form button {

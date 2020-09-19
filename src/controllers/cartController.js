@@ -45,5 +45,38 @@ module.exports = {
             productosCart: req.session.cart
         });
         
+    },
+    venta: (req, res) => {
+        let cart = req.session.cart
+        //return res.send(cart)
+        db.Venta.create({
+            total: req.body.totalOk,
+            user_id: req.session.user.id
+            
+          }).then(function (response) {
+
+            let data = []
+
+            for(let i=0; i<cart.length; i++){
+                data.push({
+                    product_id: cart[i].id,
+                    venta_id: response.id,
+                    user_id: response.user_id,
+                    price: Number(cart[i].price),
+                    cantidad: cart[i].cantidad
+                })
+            }
+            
+            //console.log(data)
+            db.ProductVenta.bulkCreate(data, {returning: true})
+            .then(function (result) {
+                req.session.cart = ""
+            return res.send(result)
+          });
+        })
+        
+        
+        
+        
     }
 }   

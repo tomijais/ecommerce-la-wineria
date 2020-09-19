@@ -71,11 +71,15 @@
 							<div class="col-6 col-md-6 col-sm-6">
 								<div class="formDiscount">
 									<form action="">
-										<label for="">Cupon de Descuento</label>
+										
 										<div>
+											<label for="">Cupon de Descuento</label>
 											<input type="text" name="cupon">
+										</div>
+										<div>
 											<button type="submit">Aplicar</button>
 										</div>
+										
 									</form>
 								</div>
 							</div>
@@ -83,7 +87,8 @@
 							<div class="col-6 col-md-6 col-sm-6">
 							
 								<div class="second-form">
-									<form action="">
+									<form action="" method="POST">
+										<div>
 										<div>
 											<label for="subtotal">Subtotal</label>
 											<input type="text" name="subtotal" value='$ <%= subtotal %>' disabled>
@@ -94,9 +99,11 @@
 										</div>							
 										<div>
 											<label for="total">Total</label>
-											<input type="text" name="total" value='$ <%= subtotal %>' disabled>
+											<input type="hidden" name="totalOk" id="totalOk" value=<%= subtotal %>>
+											<input type="text" name="total" id="total" value='$ <%= subtotal %>' disabled>
 										</div>
 										<button type="submit">Finalizar Compra</button>
+										</div>
 									</form>	
 								</div>
 
