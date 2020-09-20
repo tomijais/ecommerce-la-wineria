@@ -21,7 +21,7 @@
             <a class="dropdown-item" href="/filtro/1">Vinos</a>
             <a class="dropdown-item" href="/filtro/4">Espumantes</a>
             <a class="dropdown-item" href="/filtro/2">Whiskies</a>
-            <a class="dropdown-item" href="#">Promociones</a>
+            
           </div>
         </div>
         <div class="btn-group dropleft user-mobile">
@@ -45,19 +45,17 @@
           <li><a href="/filtro/1">Vinos</a></li>
           <li><a href="/filtro/4">Espumantes</a></li>
           <li><a href="/filtro/1">Whiskies</a></li>
-          <li><a href="#">Promociones</a></li>
+          
         </ul>
 
         <ul class="navegador-derecha">
-          <li>
-            <a href="#"><i class="fas fa-search"></i></a>
-          </li>
+          
           <li>
             <a href="/cart"><i class="fas fa-shopping-basket"></i></a>
           </li>
           <li class="dropdown">
             <a class="btn btn-sm dropdown-toggle dropdown-toggle-split" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-users"></i></a>
-            <div class="dropdown-menu">
+            <div class="dropdown-menu dropdown-menu-right">
               <% if(typeof localUser == "undefined") { %>
                 <a class="dropdown-item" href="/users/register"> Registrate</a> <!-- Deberia dejar verse al estar logueado-->
                 <a class="dropdown-item" href="/users/login"> Ingresar</a>
