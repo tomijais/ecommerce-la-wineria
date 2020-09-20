@@ -77,7 +77,10 @@ div.carrito-mobile {
   .menu-mobile {
     display: none;
   }
-  
+  input.input-buscador {
+    
+    width: 300px;
+  }
   div.carrito-mobile {
     display: none;
   }
@@ -104,7 +107,7 @@ div.carrito-mobile {
   }
   
   .navegador-central a { 
-    font-size: 17px;
+    font-size: 22px;
     padding: 5px 5px;
     text-transform: uppercase;
     text-decoration: none;
@@ -149,7 +152,10 @@ div.carrito-mobile {
   .menu-mobile {
     display: none;
   }
-  
+  input.input-buscador {
+    
+    width: 400px;
+  }
   div.user-mobile{
     display: none;
   }
@@ -220,4 +226,33 @@ div.carrito-mobile {
 
 input::-webkit-calendar-picker-indicator {
   display: none;
+}
+
+.fas {
+  font-size: 25px;
+}
+.far {
+  font-size: 25px;
+}
+
+input.input-buscador {
+  
+  
+  display: block;
+  border-radius: 10px;
+}
+div.buscador {
+  display: block;
+  
+  
+}
+ul.products-search {
+  background-color: white;
+  border-radius: 10px;
+}
+li.liEncontrados {
+  margin: 0;
+}
+a.encontrados {
+  font-size: 12px;
 }
