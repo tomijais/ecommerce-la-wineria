@@ -4,8 +4,7 @@ const router = express.Router();
 const path = require('path');
 
 // ************ Controller Require ************
-const mainController = require('../controllers/mainController');
-const userMiddleware = require('../middlewares/userMiddleware');
+const mainController = require("../controllers/mainController");
 
 router.get('/', mainController.index); /* GET - home page */
 router.get('/filtro/:id', mainController.filtro); /* GET - home page */

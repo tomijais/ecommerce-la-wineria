@@ -33,7 +33,7 @@
             <% } else { %>
               <a class="dropdown-item" href="/exit"> Logout</a> <!-- Deberia verse solo estando logueado-->
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="/users/account/<%=(user ? user.id :":id" )%>">Tu cuenta</a>
+              <a class="dropdown-item" href="/users/account/<%=(localUser ? localUser.id :":id" )%>">Tu cuenta</a>
             <% } %>
           </div>
         </div>         
@@ -62,7 +62,7 @@
               <% } else { %>
                 <a class="dropdown-item" href="/exit"> Logout</a> <!-- Deberia verse solo estando logueado-->
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="/users/account/<%=(user ? user.id :":id" )%>">Tu cuenta</a>
+                <a class="dropdown-item" href="/users/account/<%=(localUser ? localUser.id :":id" )%>">Tu cuenta</a>
               <% } %>
             </div>
           </li>
