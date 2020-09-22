@@ -14,14 +14,6 @@
   width: 100%;
 }
 
-.menu-mobile{
-  position: absolute;
-}
-
-.button-menu {
-  color: white;
-}
-
 img.logo {
   position: absolute;
   left: 45%;
@@ -31,6 +23,71 @@ img.logo {
 .main-banner {
   top: 0;
   width: 100%;
+}
+
+.menu-mobile{
+  display: none;
+}
+
+.menu-mobile-visible{
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100vh;
+  display: flex;
+  z-index: 1000;
+  position: absolute;
+  transition: height .4s;
+  flex-direction: column;
+  background-color: #FAF8F5;
+}
+
+.button-menu{
+  background-color: transparent;
+  border: none;
+  display: inline;
+  position: absolute;
+  left: 9px;
+  top: 10px;
+  outline: none !important;
+  z-index: 2000;
+}
+
+.navegador-central{
+  margin-top: 32px;
+}
+
+input.input-buscador{
+  width: 100%;
+}
+
+ul li a.li-link{
+  margin-left: 1rem;
+}
+
+.lines{
+  background-color:black;
+  width: 25px;
+  height: 2px;
+  margin-top: 5px;
+  display: block;
+}
+
+.first-line{ 
+  transform: rotate(45deg); 
+  margin-top: 1.5rem;
+  margin-left: -0.2rem;  
+}
+
+.second-line{
+  transform: rotate(-45deg);
+  margin-top: -0.1rem;
+  margin-left: -0.2rem  
+}
+
+.third-line{
+  display: none;
 }
 
 /*====== Dropdown mobile======*/
@@ -77,10 +134,15 @@ div.carrito-mobile {
   .menu-mobile {
     display: none;
   }
+
+  .button-menu{
+    display: none;
+  }
+
   input.input-buscador {
-    
     width: 300px;
   }
+
   div.carrito-mobile {
     display: none;
   }
@@ -100,6 +162,7 @@ div.carrito-mobile {
   
   .navegador-central {
     display: flex;
+    margin-top: 0;
     z-index: 2000; 
     width: 100%;
     flex-wrap: wrap;
@@ -152,10 +215,15 @@ div.carrito-mobile {
   .menu-mobile {
     display: none;
   }
+
+  .button-menu{
+    display: none;
+  }
+
   input.input-buscador {
-    
     width: 400px;
   }
+
   div.user-mobile{
     display: none;
   }
@@ -180,6 +248,7 @@ div.carrito-mobile {
   .navegador-central {
     display: flex;
     z-index: 2000; 
+    margin-top: 0;
     width: 100%;
     flex-wrap: wrap;
     justify-content: center;

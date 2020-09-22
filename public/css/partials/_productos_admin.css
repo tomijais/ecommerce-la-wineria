@@ -5,7 +5,6 @@ h3.adminProd {
 
 div.contenedorAdmin {
     justify-content: center;
-    margin-bottom: 5vh;
 }
 
 .card-margin {
@@ -16,12 +15,19 @@ div.contenedorAdmin {
     h3.adminProd {
         margin-top: 20vh;       
     }
+
+    div.contenedorAdmin {
+        margin-bottom: 10vh;
+    }
 }
 
 @media (min-width: 1100px) {
     h3.adminProd {
         margin-top: 18vh;
-        margin-bottom: 5vh;
+    }
+
+    div.contenedorAdmin {
+        margin-bottom: 20vh;
     }
 
     div.card {
