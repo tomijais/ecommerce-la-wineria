@@ -42,7 +42,7 @@
 .sale-details .formDiscount form div input {
  width: 100%;
 }
-.sale-details .formDiscount form div button {
+/*.sale-details .formDiscount form div button {
     width: 100%;
     background-color: #32971D;
     border-radius: 5px;
@@ -51,8 +51,14 @@
     margin-left: 1vw;
     text-align: center;
     text-decoration: none; 
+}*/
+div.botonCarrito button a:hover {
+    color: white;
 }
-
+.sale-details .formDiscount form div button {
+    margin-top: 5%;
+    
+}
 
 
 .sale-details .second-form {
@@ -73,13 +79,13 @@
     font-weight: bold;
 }
 
-.sale-details .second-form form button {
+/*.sale-details .second-form form button {
     background-color: #32971D;
     border-radius: 5px;
     margin: 10% 25%;
     padding: 5px;    
     text-decoration: none;
-}
+}*/
 
 
 
@@ -130,7 +136,9 @@ a.botonCarrito {
     padding: 10px;
     border-radius: 5px;
     text-align: center;
-    text-decoration: none;   
+    text-decoration: none; 
+    color: white;
+    font-weight: bold;
 }
 
 /*---- MEDIA QUERIES ----*/

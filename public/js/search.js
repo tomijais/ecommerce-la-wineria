@@ -1,22 +1,25 @@
 window.addEventListener("load", function () {
   const $btn_search = document.querySelector(".button-buscador");
-  const $list = document.querySelector(".products-search");
-  const $input_search = document.querySelector(".input-buscador");
-  const buscados = document.querySelector(".juancho")
+  const $lists = document.querySelectorAll(".products-search");
+  const $input_searchs = document.querySelectorAll(".input-buscador");
+  const buscados = document.querySelectorAll(".juancho")
 
+  for (const $input_search of $input_searchs) {
   $input_search.addEventListener("input", function (e) {
     fetch("/admin/api")
       .then(function (response) {
         return response.json();
       })
       .then(function (info) {
-        buscados.setAttribute('hidden', true)
-        $list.innerHTML = "";
-        if (e.target.value == "") {
-          buscados.setAttribute('hidden', true)
+        for (const buscado of buscados) {
+          buscado.setAttribute('hidden', true)
+          for (const $list of $lists) {
           $list.innerHTML = "";
-        } else {
-          buscados.removeAttribute('hidden')
+          if (e.target.value == "") {
+            buscado.setAttribute('hidden', true)
+            $list.innerHTML = "";
+          } else {
+          buscado.removeAttribute('hidden')
           info.forEach((dato) => {
             if (
               dato.name
@@ -29,9 +32,12 @@ window.addEventListener("load", function () {
           })
           
           if($list.children.length == 0){
-            buscados.setAttribute('hidden', true)
+            buscado.setAttribute('hidden', true)
           }
         }
+      }
+    }
       });
-  });
+  })
+}
 });

@@ -41,13 +41,20 @@
 							</td>
 							<td class="rest">$ <%= productosCart[i].price %>
 							</td>
-							<td class="rest"><input type="number" value="<%= productosCart[i].cantidad %>" min="1"></td>
+							<td class="rest">
+								<form class="agregaOk" action="/cart/update" method="POST">
+									<input type="hidden" value="<%= productosCart[i].id %>" name="id_producto">
+									<input type="number" value="<%= productosCart[i].cantidad %>" name="cantidad" min="1">
+									<button type="submit" class="btn btn-success" style="padding: 3px 6px;"><i class="far fa-check-circle"></i></button>
+								</form>	
+								
+							</td>
 							<td class="rest">$ <%= (productosCart[i].price * productosCart[i].cantidad) %></td>
 							
 							<td class="rest">
 								<form class="borrar" action="/cart/delete" method="POST">
 									<input type="hidden" value="<%= productosCart[i].id %>" name="id_producto">
-									<button type="submit" class="btn btn-danger"><i class="fas fa-trash"></i></button>
+									<button type="submit" class="btn btn-danger" style="padding: 3px 6px;"><i class="fas fa-trash"></i></button>
 								</form>
 							</td>
 							
@@ -60,8 +67,12 @@
 				
 				
 				<div class="botonesCarrito">
-					<a href="/" class="botonCarrito">Seguir Comprando</a>
-					<a href="#" class="botonCarrito">Limpiar Carrito</a>
+				<!--<a href="/" class="botonCarrito">Seguir Comprando</a>-->
+				<!--<a href="#" class="botonCarrito">Limpiar Carrito</a> -->
+					<button type="button" class="btn btn-success" style="margin-right: 5px;" role="link" onclick="window.location='http://localhost:3000/'">Seguir Comprando</button>
+					<form action="/cart/clear" method="POST" class="reClear">
+					<button type="submit" class="btn btn-success">Limpiar Carrito</button>
+					</form>
 				</div>
 			
 				<div class="sale-details">
@@ -70,14 +81,14 @@
 						<div class="row">
 							<div class="col-6 col-md-6 col-sm-6">
 								<div class="formDiscount">
-									<form action="">
+									<form action="" class="descuento">
 										
 										<div>
 											<label for="">Cupon de Descuento</label>
-											<input type="text" name="cupon">
+											<input type="text" name="cupon" id="cupon">
 										</div>
 										<div>
-											<button type="submit">Aplicar</button>
+											<button type="submit" class="btn btn-success">Aplicar</button>
 										</div>
 										
 									</form>
@@ -87,22 +98,22 @@
 							<div class="col-6 col-md-6 col-sm-6">
 							
 								<div class="second-form">
-									<form action="" method="POST">
+									<form action="/cart/venta" method="POST" class="end">
 										<div>
 										<div>
 											<label for="subtotal">Subtotal</label>
-											<input type="text" name="subtotal" value='$ <%= subtotal %>' disabled>
+											<input type="text" name="subtotal" id="subtotal" value='$ <%= subtotal %>' disabled>
 										</div>
 										<div>
 											<label for="descuento">Descuento %</label>
-											<input type="text" name="descuento" value='$ 0' disabled>
+											<input type="text" name="descuento" id="descuento" value='0 %' disabled>
 										</div>							
 										<div>
 											<label for="total">Total</label>
 											<input type="hidden" name="totalOk" id="totalOk" value=<%= subtotal %>>
 											<input type="text" name="total" id="total" value='$ <%= subtotal %>' disabled>
 										</div>
-										<button type="submit">Finalizar Compra</button>
+										<button type="submit" class="btn btn-success">Finalizar Compra</button>
 										</div>
 									</form>	
 								</div>

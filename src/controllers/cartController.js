@@ -31,6 +31,22 @@ module.exports = {
 
         return res.json(req.session.cart);
     },
+    update: function(req, res) {
+        let check = false;
+
+        if(typeof req.session.cart == 'undefined') {
+            req.session.cart = []
+        }
+
+        for(let i = 0; i < req.session.cart.length; i++) {
+            if(req.session.cart[i].id == req.body.id_producto) {
+                check = true;
+                req.session.cart[i].cantidad = (req.body.cantidad) ? Number(req.body.cantidad) : 1;
+            }
+        }
+        
+        return res.json(req.session.cart);
+    },
     delete: function(req, res) {
         let idProducto = req.body.id_producto
         console.log(idProducto)
@@ -54,29 +70,24 @@ module.exports = {
             user_id: req.session.user.id
             
           }).then(function (response) {
-
-            let data = []
-
-            for(let i=0; i<cart.length; i++){
-                data.push({
-                    product_id: cart[i].id,
-                    venta_id: response.id,
-                    user_id: response.user_id,
-                    price: Number(cart[i].price),
-                    cantidad: cart[i].cantidad
-                })
-            }
             
-            //console.log(data)
-            db.ProductVenta.bulkCreate(data, {returning: true})
-            .then(function (result) {
-                req.session.cart = ""
-            return res.send(result)
+            req.session.cart = ""
+            return res.redirect('/')
           });
-        })
         
         
         
         
-    }
+        
+    },
+    clear: (function(req, res){
+        
+        let nuevoCart = []
+        
+        req.session.cart = nuevoCart
+        
+        res.render('cart', {
+            productosCart: req.session.cart
+        });
+    })
 }   

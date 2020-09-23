@@ -30,10 +30,12 @@
             <% if(typeof localUser == "undefined") { %>
               <a class="dropdown-item" href="/users/register"> Registrate</a> <!-- Deberia dejar verse al estar logueado-->
               <a class="dropdown-item" href="/users/login"> Ingresar</a>
+              <input type="hidden" name="locaUser" id="locaUser" value="NO">
             <% } else { %>
               <a class="dropdown-item" href="/exit"> Logout</a> <!-- Deberia verse solo estando logueado-->
               <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="/users/account/<%=(localUser ? localUser.id :":id" )%>">Tu cuenta</a>
+              <input type="hidden" name="locaUser" id="locaUser" value="<%=(localUser ? localUser.id :":id" )%>">
             <% } %>
           </div>
         </div>         
@@ -59,10 +61,12 @@
               <% if(typeof localUser == "undefined") { %>
                 <a class="dropdown-item" href="/users/register"> Registrate</a> <!-- Deberia dejar verse al estar logueado-->
                 <a class="dropdown-item" href="/users/login"> Ingresar</a>
+                <input type="hidden" name="locaUser" id="locaUser" value="NO">
               <% } else { %>
                 <a class="dropdown-item" href="/exit"> Logout</a> <!-- Deberia verse solo estando logueado-->
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="/users/account/<%=(localUser ? localUser.id :":id" )%>">Tu cuenta</a>
+                <input type="hidden" name="locaUser" id="locaUser" value="<%=(localUser ? localUser.id :":id" )%>">
               <% } %>
             </div>
           </li>
