@@ -76,7 +76,7 @@ let usersController = {
     });
   },
   accountEditSave: function (req, res) {
-    db.Usuario.update(
+    db.User.update(
       {
         first_name: req.body.first_name,
         last_name: req.body.last_name,
@@ -87,6 +87,8 @@ let usersController = {
           req.files[0] != undefined
             ? req.files[0].filename
             : "default-image.jpg",
+        direccion: req.body.direccion,
+        telefono: req.body.telefono,
         status: 1,
       },
       {

@@ -32,6 +32,12 @@ module.exports = function(sequelize, dataTypes) {
         },
         status: {
             type: dataTypes.TINYINT(10).UNSIGNED
+        },
+        direccion: {
+            type: dataTypes.STRING(500)
+        },
+        telefono: {
+            type: dataTypes.STRING(45)
         }
     }
     let config = {
