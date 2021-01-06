@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/tomijais/grupo_5_bebidas#readme",
   "dependencies": {
-    "axios": "^0.20.0",
+    "axios": "^0.21.1",
     "bcrypt": "^5.0.0",
     "cookie-parser": "^1.4.5",
     "ejs": "^3.1.3",
